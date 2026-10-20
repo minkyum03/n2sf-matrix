@@ -1,0 +1,1925 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>N2SF 보안통제 매트릭스</title>
+<meta name="description" content="국가 망 보안체계(N2SF) 보안 가이드라인 1.0 기반 274개 보안통제 항목 매트릭스">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="N2SF 보안통제 매트릭스">
+<meta property="og:description" content="국가 망 보안체계(N2SF) 보안 가이드라인 1.0 기반 274개 보안통제 항목 매트릭스">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="static/css/style.css">
+</head>
+<body class="page-matrix">
+
+<header class="topbar">
+  <a class="brand" href="index.html">N2SF 보안통제 매트릭스</a>
+  <button class="menu-btn" type="button" aria-label="목차 열기" data-toggle-sidebar>☰</button>
+  <nav class="topnav">
+    <a href="index.html" aria-current="page">매트릭스</a>
+    <a href="controls/index.html" >전체 목록</a>
+    <a href="data/n2sf_controls.json" download>JSON<span class="long"> 다운로드</span></a>
+  </nav>
+  <a class="source-link" href="https://www.ncsc.go.kr:4018/main/cop/bbs/selectBoardArticle.do?bbsId=Notification_main&amp;nttId=218022" target="_blank" rel="noopener">원본 출처: 국가사이버안보센터</a>
+</header>
+
+<div class="layout no-sidebar">
+  <main class="content">
+<section class="mx-hero">
+  <h1>N2SF 보안통제 항목 매트릭스</h1>
+  <p>국가 망 보안체계(N2SF) 보안가이드라인 1.0
+    · 27개 통제그룹 · 274개 통제항목</p>
+</section>
+
+<div class="mx-toolbar" data-filter-scope="matrix">
+  <div class="filter" role="group" aria-label="등급 필터">
+    <span class="filter-label">등급 필터:</span>
+    <button type="button" class="gbtn active" data-grade="">전체</button>
+    <button type="button" class="gbtn" data-grade="C" aria-pressed="false">C 기밀</button>
+    <button type="button" class="gbtn" data-grade="S" aria-pressed="false">S 민감</button>
+    <button type="button" class="gbtn" data-grade="O" aria-pressed="false">O 공개</button>
+  </div>
+  <div class="count"><span data-count>274</span> / 274 항목</div>
+</div>
+
+<div class="mx-scroll">
+  <div class="mx">
+    <section class="mx-chapter ch-1">
+      <h2 class="mx-ch-head">제1장 권한</h2>
+      <div class="mx-cols">
+        <div class="mx-col">
+          <a class="mx-g-head" href="groups/LP.html">
+            <b>최소 권한</b>
+            <span class="en">Least Privilege</span>
+            <span class="meta">LP · 13개</span>
+          </a>
+          <ul class="mx-list">
+            <li>
+              <a class="mx-card" href="controls/N2SF-LP-1.html" data-grades="CS">
+  <span class="mx-name">정보시스템 접근 권한 정의</span>
+  <span class="mx-id">N2SF-LP-1</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-LP-2.html" data-grades="CSO">
+  <span class="mx-name">보안통제 권한 제한</span>
+  <span class="mx-id">N2SF-LP-2</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-LP-3.html" data-grades="CSO">
+  <span class="mx-name">보안통제 계정 노출 방지</span>
+  <span class="mx-id">N2SF-LP-3</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-LP-4.html" data-grades="CSO">
+  <span class="mx-name">관리자 권한 제한 <span class="mx-n">(4)</span></span>
+  <span class="mx-id">N2SF-LP-4</span>
+</a>
+              <ul class="mx-sub">
+<li><a class="mx-card sub" href="controls/N2SF-LP-4_1.html" data-grades="SO">
+  <span class="mx-name">원격접속을 통한 관리자 권한 접속제한</span>
+  <span class="mx-id">N2SF-LP-4(1)</span>
+</a></li><li><a class="mx-card sub" href="controls/N2SF-LP-4_2.html" data-grades="CSO">
+  <span class="mx-name">기관 이외 인원의 관리자 권한 제한</span>
+  <span class="mx-id">N2SF-LP-4(2)</span>
+</a></li><li><a class="mx-card sub" href="controls/N2SF-LP-4_3.html" data-grades="">
+  <span class="mx-name">사용자에게 부여된 관리자 권한 관리</span>
+  <span class="mx-id">N2SF-LP-4(3)</span>
+</a></li><li><a class="mx-card sub" href="controls/N2SF-LP-4_4.html" data-grades="CSO">
+  <span class="mx-name">관리자 권한 실행 로깅 및 감사</span>
+  <span class="mx-id">N2SF-LP-4(4)</span>
+</a></li>              </ul>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-LP-5.html" data-grades="CSO">
+  <span class="mx-name">코드 실행권한 제한</span>
+  <span class="mx-id">N2SF-LP-5</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-LP-M1.html" data-grades="CS">
+  <span class="mx-name">특별권한 사용자 지정</span>
+  <span class="mx-id">N2SF-LP-M1</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-LP-M2.html" data-grades="CS">
+  <span class="mx-name">주요 사용자 위험 관리</span>
+  <span class="mx-id">N2SF-LP-M2</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-LP-M3.html" data-grades="CSO">
+  <span class="mx-name">접근권한 사전 설정</span>
+  <span class="mx-id">N2SF-LP-M3</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-LP-M4.html" data-grades="CSO">
+  <span class="mx-name">접근권한과 정보 연계</span>
+  <span class="mx-id">N2SF-LP-M4</span>
+</a>
+            </li>
+          </ul>
+        </div>
+        <div class="mx-col">
+          <a class="mx-g-head" href="groups/IV.html">
+            <b>신원 검증</b>
+            <span class="en">Identity Verification</span>
+            <span class="meta">IV · 5개</span>
+          </a>
+          <ul class="mx-list">
+            <li>
+              <a class="mx-card" href="controls/N2SF-IV-1.html" data-grades="CS">
+  <span class="mx-name">관리자 승인</span>
+  <span class="mx-id">N2SF-IV-1</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IV-2.html" data-grades="CS">
+  <span class="mx-name">신원 증거 제출 <span class="mx-n">(1)</span></span>
+  <span class="mx-id">N2SF-IV-2</span>
+</a>
+              <ul class="mx-sub">
+<li><a class="mx-card sub" href="controls/N2SF-IV-2_1.html" data-grades="CS">
+  <span class="mx-name">신원 증거 검증</span>
+  <span class="mx-id">N2SF-IV-2(1)</span>
+</a></li>              </ul>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IV-3.html" data-grades="CSO">
+  <span class="mx-name">외부 신원 검증 수용</span>
+  <span class="mx-id">N2SF-IV-3</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IV-M1.html" data-grades="C">
+  <span class="mx-name">대면 신원 증거 검증</span>
+  <span class="mx-id">N2SF-IV-M1</span>
+</a>
+            </li>
+          </ul>
+        </div>
+        <div class="mx-col">
+          <a class="mx-g-head" href="groups/IM.html">
+            <b>식별자 관리</b>
+            <span class="en">Identifier Management</span>
+            <span class="meta">IM · 5개</span>
+          </a>
+          <ul class="mx-list">
+            <li>
+              <a class="mx-card" href="controls/N2SF-IM-1.html" data-grades="C">
+  <span class="mx-name">공개된 식별자의 계정 사용 금지</span>
+  <span class="mx-id">N2SF-IM-1</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IM-2.html" data-grades="CS">
+  <span class="mx-name">사용자 상태 식별</span>
+  <span class="mx-id">N2SF-IM-2</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IM-3.html" data-grades="CS">
+  <span class="mx-name">기관 간 상호 관리</span>
+  <span class="mx-id">N2SF-IM-3</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IM-4.html" data-grades="C">
+  <span class="mx-name">상호(쌍, Pairwise) 가명 식별자</span>
+  <span class="mx-id">N2SF-IM-4</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IM-5.html" data-grades="C">
+  <span class="mx-name">속성 유지관리 및 보호</span>
+  <span class="mx-id">N2SF-IM-5</span>
+</a>
+            </li>
+          </ul>
+        </div>
+        <div class="mx-col">
+          <a class="mx-g-head" href="groups/AC.html">
+            <b>계정 관리</b>
+            <span class="en">Account Management</span>
+            <span class="meta">AC · 14개</span>
+          </a>
+          <ul class="mx-list">
+            <li>
+              <a class="mx-card" href="controls/N2SF-AC-1.html" data-grades="CS">
+  <span class="mx-name">계정 관리 자동화 <span class="mx-n">(5)</span></span>
+  <span class="mx-id">N2SF-AC-1</span>
+</a>
+              <ul class="mx-sub">
+<li><a class="mx-card sub" href="controls/N2SF-AC-1_1.html" data-grades="CS">
+  <span class="mx-name">동적 계정 관리</span>
+  <span class="mx-id">N2SF-AC-1(1)</span>
+</a></li><li><a class="mx-card sub" href="controls/N2SF-AC-1_2.html" data-grades="CS">
+  <span class="mx-name">계정 상태 모니터링</span>
+  <span class="mx-id">N2SF-AC-1(2)</span>
+</a></li><li><a class="mx-card sub" href="controls/N2SF-AC-1_3.html" data-grades="C">
+  <span class="mx-name">계정 자동 비활성화</span>
+  <span class="mx-id">N2SF-AC-1(3)</span>
+</a></li><li><a class="mx-card sub" href="controls/N2SF-AC-1_4.html" data-grades="CSO">
+  <span class="mx-name">계정 자동 로그아웃</span>
+  <span class="mx-id">N2SF-AC-1(4)</span>
+</a></li><li><a class="mx-card sub" href="controls/N2SF-AC-1_5.html" data-grades="CSO">
+  <span class="mx-name">불필요한 관리자 권한 계정 제거</span>
+  <span class="mx-id">N2SF-AC-1(5)</span>
+</a></li>              </ul>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-AC-2.html" data-grades="C">
+  <span class="mx-name">공유 및 그룹 계정 사용 제한</span>
+  <span class="mx-id">N2SF-AC-2</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-AC-3.html" data-grades="CS">
+  <span class="mx-name">의심스러운 계정 모니터링 <span class="mx-n">(3)</span></span>
+  <span class="mx-id">N2SF-AC-3</span>
+</a>
+              <ul class="mx-sub">
+<li><a class="mx-card sub" href="controls/N2SF-AC-3_1.html" data-grades="CSO">
+  <span class="mx-name">위험에 노출된 계정 비활성화</span>
+  <span class="mx-id">N2SF-AC-3(1)</span>
+</a></li><li><a class="mx-card sub" href="controls/N2SF-AC-3_2.html" data-grades="CS">
+  <span class="mx-name">내부 사용자 모니터링</span>
+  <span class="mx-id">N2SF-AC-3(2)</span>
+</a></li><li><a class="mx-card sub" href="controls/N2SF-AC-3_3.html" data-grades="CS">
+  <span class="mx-name">외부 사용자 모니터링</span>
+  <span class="mx-id">N2SF-AC-3(3)</span>
+</a></li>              </ul>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-AC-M1.html" data-grades="C">
+  <span class="mx-name">감사 활동 자동화</span>
+  <span class="mx-id">N2SF-AC-M1</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-AC-M2.html" data-grades="CSO">
+  <span class="mx-name">감사 기록 생성</span>
+  <span class="mx-id">N2SF-AC-M2</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-AC-M3.html" data-grades="CS">
+  <span class="mx-name">세션 감사</span>
+  <span class="mx-id">N2SF-AC-M3</span>
+</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="mx-chapter ch-2">
+      <h2 class="mx-ch-head">제2장 인증</h2>
+      <div class="mx-cols">
+        <div class="mx-col">
+          <a class="mx-g-head" href="groups/MA.html">
+            <b>다중요소 인증</b>
+            <span class="en">Multi-Factor Authentication</span>
+            <span class="meta">MA · 6개</span>
+          </a>
+          <ul class="mx-list">
+            <li>
+              <a class="mx-card" href="controls/N2SF-MA-1.html" data-grades="CSO">
+  <span class="mx-name">관리자 계정 다중요소 인증(MFA, Multi-factor Authentication)</span>
+  <span class="mx-id">N2SF-MA-1</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-MA-2.html" data-grades="CS">
+  <span class="mx-name">사용자 계정 다중요소 인증(MFA, Multi-factor Authentication)</span>
+  <span class="mx-id">N2SF-MA-2</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-MA-3.html" data-grades="CSO">
+  <span class="mx-name">다중요소 인증 장치 분리</span>
+  <span class="mx-id">N2SF-MA-3</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-MA-4.html" data-grades="CSO">
+  <span class="mx-name">다중요소 인증(MFA, Multi-factor Authentication) 경로 분리</span>
+  <span class="mx-id">N2SF-MA-4</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-MA-5.html" data-grades="CS">
+  <span class="mx-name">특정상황에서의 다중요소 인증</span>
+  <span class="mx-id">N2SF-MA-5</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-MA-M1.html" data-grades="CSO">
+  <span class="mx-name">다중인증요소 설정 및 관리</span>
+  <span class="mx-id">N2SF-MA-M1</span>
+</a>
+            </li>
+          </ul>
+        </div>
+        <div class="mx-col">
+          <a class="mx-g-head" href="groups/EI.html">
+            <b>외부인증수단</b>
+            <span class="en">External Identity</span>
+            <span class="meta">EI · 3개</span>
+          </a>
+          <ul class="mx-list">
+            <li>
+              <a class="mx-card" href="controls/N2SF-EI-1.html" data-grades="CS">
+  <span class="mx-name">외부 자격증명 수단 활용</span>
+  <span class="mx-id">N2SF-EI-1</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-EI-2.html" data-grades="CS">
+  <span class="mx-name">외부 인증수단 활용</span>
+  <span class="mx-id">N2SF-EI-2</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-EI-M1.html" data-grades="C">
+  <span class="mx-name">외부 인증수단 관리</span>
+  <span class="mx-id">N2SF-EI-M1</span>
+</a>
+            </li>
+          </ul>
+        </div>
+        <div class="mx-col">
+          <a class="mx-g-head" href="groups/DA.html">
+            <b>단말인증</b>
+            <span class="en">Device Authentication</span>
+            <span class="meta">DA · 7개</span>
+          </a>
+          <ul class="mx-list">
+            <li>
+              <a class="mx-card" href="controls/N2SF-DA-1.html" data-grades="CS">
+  <span class="mx-name">단말 무결성 검증</span>
+  <span class="mx-id">N2SF-DA-1</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-DA-2.html" data-grades="CS">
+  <span class="mx-name">정보서비스 식별 및 제한</span>
+  <span class="mx-id">N2SF-DA-2</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-DA-3.html" data-grades="CS">
+  <span class="mx-name">단말 식별 및 인증 <span class="mx-n">(2)</span></span>
+  <span class="mx-id">N2SF-DA-3</span>
+</a>
+              <ul class="mx-sub">
+<li><a class="mx-card sub" href="controls/N2SF-DA-3_1.html" data-grades="CS">
+  <span class="mx-name">인가 단말 인증</span>
+  <span class="mx-id">N2SF-DA-3(1)</span>
+</a></li><li><a class="mx-card sub" href="controls/N2SF-DA-3_2.html" data-grades="C">
+  <span class="mx-name">비인가 단말 인증</span>
+  <span class="mx-id">N2SF-DA-3(2)</span>
+</a></li>              </ul>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-DA-4.html" data-grades="C">
+  <span class="mx-name">인증된 단말의 접속 관리</span>
+  <span class="mx-id">N2SF-DA-4</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-DA-5.html" data-grades="CSO">
+  <span class="mx-name">외부 단말 접속 제어</span>
+  <span class="mx-id">N2SF-DA-5</span>
+</a>
+            </li>
+          </ul>
+        </div>
+        <div class="mx-col">
+          <a class="mx-g-head" href="groups/AU.html">
+            <b>인증보호</b>
+            <span class="en">Authentication Protection</span>
+            <span class="meta">AU · 10개</span>
+          </a>
+          <ul class="mx-list">
+            <li>
+              <a class="mx-card" href="controls/N2SF-AU-1.html" data-grades="CSO">
+  <span class="mx-name">계정 인증 재전송 공격 방지</span>
+  <span class="mx-id">N2SF-AU-1</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-AU-2.html" data-grades="CS">
+  <span class="mx-name">통합인증(SSO, Single Sign-on) 보호</span>
+  <span class="mx-id">N2SF-AU-2</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-AU-3.html" data-grades="CS">
+  <span class="mx-name">권한 위임 토큰(OAuth) 보호</span>
+  <span class="mx-id">N2SF-AU-3</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-AU-4.html" data-grades="CSO">
+  <span class="mx-name">생체인증 공격 방지</span>
+  <span class="mx-id">N2SF-AU-4</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-AU-5.html" data-grades="CS">
+  <span class="mx-name">인증시스템 구성 및 관리 <span class="mx-n">(2)</span></span>
+  <span class="mx-id">N2SF-AU-5</span>
+</a>
+              <ul class="mx-sub">
+<li><a class="mx-card sub" href="controls/N2SF-AU-5_1.html" data-grades="C">
+  <span class="mx-name">비밀번호 보안 수준 점검</span>
+  <span class="mx-id">N2SF-AU-5(1)</span>
+</a></li><li><a class="mx-card sub" href="controls/N2SF-AU-5_2.html" data-grades="C">
+  <span class="mx-name">대체 보안 수단 강구</span>
+  <span class="mx-id">N2SF-AU-5(2)</span>
+</a></li>              </ul>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-AU-6.html" data-grades="CSO">
+  <span class="mx-name">공개키 기반 구조(PKI) 인증서 관리</span>
+  <span class="mx-id">N2SF-AU-6</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-AU-M1.html" data-grades="CSO">
+  <span class="mx-name">인증정보 접근 권한 통제 및 관리</span>
+  <span class="mx-id">N2SF-AU-M1</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-AU-M2.html" data-grades="CSO">
+  <span class="mx-name">인증 위협 및 취약점 관리</span>
+  <span class="mx-id">N2SF-AU-M2</span>
+</a>
+            </li>
+          </ul>
+        </div>
+        <div class="mx-col">
+          <a class="mx-g-head" href="groups/AP.html">
+            <b>인증정책</b>
+            <span class="en">Authentication Policy</span>
+            <span class="meta">AP · 8개</span>
+          </a>
+          <ul class="mx-list">
+            <li>
+              <a class="mx-card" href="controls/N2SF-AP-1.html" data-grades="CS">
+  <span class="mx-name">기관 발급 증명수단 인증 활용</span>
+  <span class="mx-id">N2SF-AP-1</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-AP-2.html" data-grades="CS">
+  <span class="mx-name">인증 프로파일 활용</span>
+  <span class="mx-id">N2SF-AP-2</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-AP-3.html" data-grades="CS">
+  <span class="mx-name">그룹 계정 사용자 인증</span>
+  <span class="mx-id">N2SF-AP-3</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-AP-4.html" data-grades="C">
+  <span class="mx-name">재인증</span>
+  <span class="mx-id">N2SF-AP-4</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-AP-5.html" data-grades="C">
+  <span class="mx-name">동시 중복인증 차단</span>
+  <span class="mx-id">N2SF-AP-5</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-AP-M1.html" data-grades="CS">
+  <span class="mx-name">인증 정책 수립 및 절차 관리</span>
+  <span class="mx-id">N2SF-AP-M1</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-AP-M2.html" data-grades="CS">
+  <span class="mx-name">인증 관리자의 역할 및 책임 관리</span>
+  <span class="mx-id">N2SF-AP-M2</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-AP-M3.html" data-grades="CSO">
+  <span class="mx-name">인증 관련 보안사고 대응체계</span>
+  <span class="mx-id">N2SF-AP-M3</span>
+</a>
+            </li>
+          </ul>
+        </div>
+        <div class="mx-col">
+          <a class="mx-g-head" href="groups/AM.html">
+            <b>인증수단</b>
+            <span class="en">Authentication Method</span>
+            <span class="meta">AM · 11개</span>
+          </a>
+          <ul class="mx-list">
+            <li>
+              <a class="mx-card" href="controls/N2SF-AM-1.html" data-grades="CSO">
+  <span class="mx-name">암호모듈 기반 인증</span>
+  <span class="mx-id">N2SF-AM-1</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-AM-2.html" data-grades="CSO">
+  <span class="mx-name">비밀번호 기반 인증</span>
+  <span class="mx-id">N2SF-AM-2</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-AM-3.html" data-grades="CSO">
+  <span class="mx-name">공개키 기반 인증</span>
+  <span class="mx-id">N2SF-AM-3</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-AM-4.html" data-grades="CSO">
+  <span class="mx-name">초기 인증수단 변경</span>
+  <span class="mx-id">N2SF-AM-4</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-AM-5.html" data-grades="CS">
+  <span class="mx-name">인증수단 보호</span>
+  <span class="mx-id">N2SF-AM-5</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-AM-6.html" data-grades="CSO">
+  <span class="mx-name">암호화되지 않은 인증수단 내장 금지</span>
+  <span class="mx-id">N2SF-AM-6</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-AM-7.html" data-grades="CSO">
+  <span class="mx-name">캐시된 인증수단 재사용 차단</span>
+  <span class="mx-id">N2SF-AM-7</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-AM-8.html" data-grades="CS">
+  <span class="mx-name">공개키 기반 저장소 관리</span>
+  <span class="mx-id">N2SF-AM-8</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-AM-9.html" data-grades="CSO">
+  <span class="mx-name">소유기반 인증</span>
+  <span class="mx-id">N2SF-AM-9</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-AM-M1.html" data-grades="CS">
+  <span class="mx-name">인증시스템 운영 감사</span>
+  <span class="mx-id">N2SF-AM-M1</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-AM-M2.html" data-grades="CS">
+  <span class="mx-name">인증수단 정기적 보안 평가</span>
+  <span class="mx-id">N2SF-AM-M2</span>
+</a>
+            </li>
+          </ul>
+        </div>
+        <div class="mx-col">
+          <a class="mx-g-head" href="groups/LI.html">
+            <b>로그인</b>
+            <span class="en">Login</span>
+            <span class="meta">LI · 12개</span>
+          </a>
+          <ul class="mx-list">
+            <li>
+              <a class="mx-card" href="controls/N2SF-LI-1.html" data-grades="CSO">
+  <span class="mx-name">유효한 인증정보 노출 방지</span>
+  <span class="mx-id">N2SF-LI-1</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-LI-2.html" data-grades="CS">
+  <span class="mx-name">로그인 실패에 따른 접속 제한</span>
+  <span class="mx-id">N2SF-LI-2</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-LI-3.html" data-grades="CS">
+  <span class="mx-name">로그인 실패에 따른 인증 요소 추가</span>
+  <span class="mx-id">N2SF-LI-3</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-LI-4.html" data-grades="CS">
+  <span class="mx-name">계정 잠금 해제 인증 요소 추가</span>
+  <span class="mx-id">N2SF-LI-4</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-LI-5.html" data-grades="C">
+  <span class="mx-name">정보시스템 사용 알림</span>
+  <span class="mx-id">N2SF-LI-5</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-LI-6.html" data-grades="CS">
+  <span class="mx-name">직전 로그인 정보 알림</span>
+  <span class="mx-id">N2SF-LI-6</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-LI-7.html" data-grades="C">
+  <span class="mx-name">실패 로그인 정보 알림</span>
+  <span class="mx-id">N2SF-LI-7</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-LI-8.html" data-grades="CS">
+  <span class="mx-name">로그인 이력 정보 제공</span>
+  <span class="mx-id">N2SF-LI-8</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-LI-9.html" data-grades="C">
+  <span class="mx-name">계정 정보 변경 알림</span>
+  <span class="mx-id">N2SF-LI-9</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-LI-10.html" data-grades="C">
+  <span class="mx-name">로그인 부가 정보 제공</span>
+  <span class="mx-id">N2SF-LI-10</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-LI-M1.html" data-grades="C">
+  <span class="mx-name">로그인 실패 모니터링 및 보고</span>
+  <span class="mx-id">N2SF-LI-M1</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-LI-M2.html" data-grades="CS">
+  <span class="mx-name">주기적 로그인 정보 무결성 점검</span>
+  <span class="mx-id">N2SF-LI-M2</span>
+</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="mx-chapter ch-3">
+      <h2 class="mx-ch-head">제3장 분리 및 격리</h2>
+      <div class="mx-cols">
+        <div class="mx-col">
+          <a class="mx-g-head" href="groups/SG.html">
+            <b>분리</b>
+            <span class="en">Segregation</span>
+            <span class="meta">SG · 14개</span>
+          </a>
+          <ul class="mx-list">
+            <li>
+              <a class="mx-card" href="controls/N2SF-SG-1.html" data-grades="CS">
+  <span class="mx-name">하드웨어 기반 분리</span>
+  <span class="mx-id">N2SF-SG-1</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-SG-2.html" data-grades="CSO">
+  <span class="mx-name">운영체제(OS) 기반 분리 <span class="mx-n">(1)</span></span>
+  <span class="mx-id">N2SF-SG-2</span>
+</a>
+              <ul class="mx-sub">
+<li><a class="mx-card sub" href="controls/N2SF-SG-2_1.html" data-grades="C">
+  <span class="mx-name">시스템 파티셔닝</span>
+  <span class="mx-id">N2SF-SG-2(1)</span>
+</a></li>              </ul>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-SG-3.html" data-grades="CS">
+  <span class="mx-name">소프트웨어 기반 분리 <span class="mx-n">(1)</span></span>
+  <span class="mx-id">N2SF-SG-3</span>
+</a>
+              <ul class="mx-sub">
+<li><a class="mx-card sub" href="controls/N2SF-SG-3_1.html" data-grades="CS">
+  <span class="mx-name">프로세스 기반 분리</span>
+  <span class="mx-id">N2SF-SG-3(1)</span>
+</a></li>              </ul>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-SG-4.html" data-grades="CSO">
+  <span class="mx-name">IP체계 분리</span>
+  <span class="mx-id">N2SF-SG-4</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-SG-5.html" data-grades="CS">
+  <span class="mx-name">보안･운영관리 인프라 분리 <span class="mx-n">(1)</span></span>
+  <span class="mx-id">N2SF-SG-5</span>
+</a>
+              <ul class="mx-sub">
+<li><a class="mx-card sub" href="controls/N2SF-SG-5_1.html" data-grades="CSO">
+  <span class="mx-name">개발/테스트 환경 분리</span>
+  <span class="mx-id">N2SF-SG-5(1)</span>
+</a></li>              </ul>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-SG-6.html" data-grades="CS">
+  <span class="mx-name">보안 기능과 사용자 기능 분리</span>
+  <span class="mx-id">N2SF-SG-6</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-SG-M1.html" data-grades="CS">
+  <span class="mx-name">분리 정책 및 절차 수립</span>
+  <span class="mx-id">N2SF-SG-M1</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-SG-M2.html" data-grades="C">
+  <span class="mx-name">보안·운영 인프라 접근 책임 및 역할 관리</span>
+  <span class="mx-id">N2SF-SG-M2</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-SG-M3.html" data-grades="CS">
+  <span class="mx-name">분리된 시스템 정기적 평가 및 감사</span>
+  <span class="mx-id">N2SF-SG-M3</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-SG-M4.html" data-grades="CS">
+  <span class="mx-name">분리 환경 접근 권한 관리 및 모니터링</span>
+  <span class="mx-id">N2SF-SG-M4</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-SG-M5.html" data-grades="C">
+  <span class="mx-name">분리 위반사항 대응체계 운영</span>
+  <span class="mx-id">N2SF-SG-M5</span>
+</a>
+            </li>
+          </ul>
+        </div>
+        <div class="mx-col">
+          <a class="mx-g-head" href="groups/IS.html">
+            <b>격리</b>
+            <span class="en">Isolation</span>
+            <span class="meta">IS · 6개</span>
+          </a>
+          <ul class="mx-list">
+            <li>
+              <a class="mx-card" href="controls/N2SF-IS-1.html" data-grades="C">
+  <span class="mx-name">프로세스 격리</span>
+  <span class="mx-id">N2SF-IS-1</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IS-2.html" data-grades="CSO">
+  <span class="mx-name">정보시스템 운영･관리 기능 표출 제한</span>
+  <span class="mx-id">N2SF-IS-2</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IS-3.html" data-grades="CS">
+  <span class="mx-name">애플리케이션 논리적 격리</span>
+  <span class="mx-id">N2SF-IS-3</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IS-4.html" data-grades="CSO">
+  <span class="mx-name">네트워크 격리</span>
+  <span class="mx-id">N2SF-IS-4</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IS-5.html" data-grades="CSO">
+  <span class="mx-name">가상화 환경 격리</span>
+  <span class="mx-id">N2SF-IS-5</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IS-6.html" data-grades="CSO">
+  <span class="mx-name">격리 위반사항 대응체계 운영</span>
+  <span class="mx-id">N2SF-IS-6</span>
+</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="mx-chapter ch-4">
+      <h2 class="mx-ch-head">제4장 통제</h2>
+      <div class="mx-cols">
+        <div class="mx-col">
+          <a class="mx-g-head" href="groups/IF.html">
+            <b>정보흐름</b>
+            <span class="en">Information Flow</span>
+            <span class="meta">IF · 20개</span>
+          </a>
+          <ul class="mx-list">
+            <li>
+              <a class="mx-card" href="controls/N2SF-IF-1.html" data-grades="CS">
+  <span class="mx-name">정보흐름의 동적 통제</span>
+  <span class="mx-id">N2SF-IF-1</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IF-2.html" data-grades="CS">
+  <span class="mx-name">암호화된 정보흐름 통제</span>
+  <span class="mx-id">N2SF-IF-2</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IF-3.html" data-grades="CSO">
+  <span class="mx-name">임베디드 데이터 삽입 차단</span>
+  <span class="mx-id">N2SF-IF-3</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IF-4.html" data-grades="C">
+  <span class="mx-name">메타데이터 활용 정보흐름 통제</span>
+  <span class="mx-id">N2SF-IF-4</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IF-5.html" data-grades="C">
+  <span class="mx-name">일방향 정보흐름 통제</span>
+  <span class="mx-id">N2SF-IF-5</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IF-6.html" data-grades="CSO">
+  <span class="mx-name">필터링 규칙 정보흐름 통제</span>
+  <span class="mx-id">N2SF-IF-6</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IF-7.html" data-grades="CS">
+  <span class="mx-name">데이터 유형 식별자 통제</span>
+  <span class="mx-id">N2SF-IF-7</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IF-8.html" data-grades="CS">
+  <span class="mx-name">인가되지 않은 정보 전송 통제</span>
+  <span class="mx-id">N2SF-IF-8</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IF-9.html" data-grades="CSO">
+  <span class="mx-name">출발지점과 도착지점 식별 및 인증</span>
+  <span class="mx-id">N2SF-IF-9</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IF-10.html" data-grades="CS">
+  <span class="mx-name">정보 전송 방식 제한</span>
+  <span class="mx-id">N2SF-IF-10</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IF-11.html" data-grades="C">
+  <span class="mx-name">데이터 전송 차단</span>
+  <span class="mx-id">N2SF-IF-11</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IF-12.html" data-grades="CS">
+  <span class="mx-name">정보흐름 통제 기능 유지</span>
+  <span class="mx-id">N2SF-IF-12</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IF-13.html" data-grades="CS">
+  <span class="mx-name">시간 기반/상황 기반 흐름 제한</span>
+  <span class="mx-id">N2SF-IF-13</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IF-14.html" data-grades="CS">
+  <span class="mx-name">보안등급기반 흐름 통제</span>
+  <span class="mx-id">N2SF-IF-14</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IF-15.html" data-grades="CS">
+  <span class="mx-name">전용 통신망 구성</span>
+  <span class="mx-id">N2SF-IF-15</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IF-M1.html" data-grades="CSO">
+  <span class="mx-name">정보흐름 통제 정책 수립 및 갱신</span>
+  <span class="mx-id">N2SF-IF-M1</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IF-M2.html" data-grades="CSO">
+  <span class="mx-name">정보흐름 로그 기록 및 보존</span>
+  <span class="mx-id">N2SF-IF-M2</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IF-M3.html" data-grades="CS">
+  <span class="mx-name">정보흐름 통제 감사 및 이행 점검</span>
+  <span class="mx-id">N2SF-IF-M3</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IF-M4.html" data-grades="CS">
+  <span class="mx-name">비인가 흐름 탐지 자동화</span>
+  <span class="mx-id">N2SF-IF-M4</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IF-M5.html" data-grades="CS">
+  <span class="mx-name">통제 실패·예외 보고 체계</span>
+  <span class="mx-id">N2SF-IF-M5</span>
+</a>
+            </li>
+          </ul>
+        </div>
+        <div class="mx-col">
+          <a class="mx-g-head" href="groups/EB.html">
+            <b>외부경계</b>
+            <span class="en">External Boundary</span>
+            <span class="meta">EB · 20개</span>
+          </a>
+          <ul class="mx-list">
+            <li>
+              <a class="mx-card" href="controls/N2SF-EB-1.html" data-grades="CS">
+  <span class="mx-name">연결 접점 제한</span>
+  <span class="mx-id">N2SF-EB-1</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-EB-2.html" data-grades="CSO">
+  <span class="mx-name">서비스별 외부 통신 통제</span>
+  <span class="mx-id">N2SF-EB-2</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-EB-3.html" data-grades="CS">
+  <span class="mx-name">화이트리스트 기반 통신 허용</span>
+  <span class="mx-id">N2SF-EB-3</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-EB-4.html" data-grades="CSO">
+  <span class="mx-name">분할 터널링(Split Tunneling) 제한</span>
+  <span class="mx-id">N2SF-EB-4</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-EB-5.html" data-grades="C">
+  <span class="mx-name">통신 경유(proxy) 강제화</span>
+  <span class="mx-id">N2SF-EB-5</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-EB-6.html" data-grades="CS">
+  <span class="mx-name">외부로의 사이버 위협 통신 발신 제한</span>
+  <span class="mx-id">N2SF-EB-6</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-EB-7.html" data-grades="CS">
+  <span class="mx-name">호스트 기반 경계 보호</span>
+  <span class="mx-id">N2SF-EB-7</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-EB-8.html" data-grades="CSO">
+  <span class="mx-name">운영관리용 포트의 물리적 연결 차단</span>
+  <span class="mx-id">N2SF-EB-8</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-EB-9.html" data-grades="CSO">
+  <span class="mx-name">전용 장치를 통한 관리자 권한 접속</span>
+  <span class="mx-id">N2SF-EB-9</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-EB-10.html" data-grades="CSO">
+  <span class="mx-name">정보시스템 구성 요소 외부 노출 차단</span>
+  <span class="mx-id">N2SF-EB-10</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-EB-11.html" data-grades="CSO">
+  <span class="mx-name">외부 경계 보호 기능 유지</span>
+  <span class="mx-id">N2SF-EB-11</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-EB-12.html" data-grades="CSO">
+  <span class="mx-name">외부 통신용 정보자산(장치) 설치 금지</span>
+  <span class="mx-id">N2SF-EB-12</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-EB-13.html" data-grades="CS">
+  <span class="mx-name">오류정보 발신자 전송 제한</span>
+  <span class="mx-id">N2SF-EB-13</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-EB-14.html" data-grades="C">
+  <span class="mx-name">외부 DNS 통신 제한</span>
+  <span class="mx-id">N2SF-EB-14</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-EB-15.html" data-grades="CS">
+  <span class="mx-name">우회 통신 수단 탐지 및 차단</span>
+  <span class="mx-id">N2SF-EB-15</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-EB-M1.html" data-grades="CS">
+  <span class="mx-name">개인 식별 정보 보호</span>
+  <span class="mx-id">N2SF-EB-M1</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-EB-M2.html" data-grades="CSO">
+  <span class="mx-name">외부 경계 정책 수립 및 갱신</span>
+  <span class="mx-id">N2SF-EB-M2</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-EB-M3.html" data-grades="CSO">
+  <span class="mx-name">외부 통신 로그 기록 및 감사</span>
+  <span class="mx-id">N2SF-EB-M3</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-EB-M4.html" data-grades="C">
+  <span class="mx-name">외부 경계 위협 탐지 자동화</span>
+  <span class="mx-id">N2SF-EB-M4</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-EB-M5.html" data-grades="CS">
+  <span class="mx-name">비상 시 외부 통신 격리</span>
+  <span class="mx-id">N2SF-EB-M5</span>
+</a>
+            </li>
+          </ul>
+        </div>
+        <div class="mx-col">
+          <a class="mx-g-head" href="groups/CD.html">
+            <b>CDS</b>
+            <span class="en">Cross Domain Solution</span>
+            <span class="meta">CD · 17개</span>
+          </a>
+          <ul class="mx-list">
+            <li>
+              <a class="mx-card" href="controls/N2SF-CD-1.html" data-grades="CS">
+  <span class="mx-name">도메인 간 정보 흐름 검증 및 통제</span>
+  <span class="mx-id">N2SF-CD-1</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-CD-2.html" data-grades="C">
+  <span class="mx-name">다단계 보안 레이블 적용</span>
+  <span class="mx-id">N2SF-CD-2</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-CD-3.html" data-grades="CS">
+  <span class="mx-name">일방향 전송 기술 적용 (Data Diode)</span>
+  <span class="mx-id">N2SF-CD-3</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-CD-4.html" data-grades="CS">
+  <span class="mx-name">검증 기반 릴레이 시스템 적용</span>
+  <span class="mx-id">N2SF-CD-4</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-CD-5.html" data-grades="CS">
+  <span class="mx-name">파일 유형 기반 전송 정책</span>
+  <span class="mx-id">N2SF-CD-5</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-CD-6.html" data-grades="C">
+  <span class="mx-name">콘텐츠 무해화 (CDR) 적용</span>
+  <span class="mx-id">N2SF-CD-6</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-CD-7.html" data-grades="CS">
+  <span class="mx-name">메타데이터 기반 통제 정책</span>
+  <span class="mx-id">N2SF-CD-7</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-CD-8.html" data-grades="CSO">
+  <span class="mx-name">승인된 CDS 구성 요소만 사용</span>
+  <span class="mx-id">N2SF-CD-8</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-CD-9.html" data-grades="CS">
+  <span class="mx-name">CDS 우회 경로 탐지 및 차단</span>
+  <span class="mx-id">N2SF-CD-9</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-CD-10.html" data-grades="CS">
+  <span class="mx-name">전송 실패 보호 및 무결성 보장</span>
+  <span class="mx-id">N2SF-CD-10</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-CD-11.html" data-grades="CS">
+  <span class="mx-name">등급 간 콘텐츠 정책 적용</span>
+  <span class="mx-id">N2SF-CD-11</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-CD-12.html" data-grades="CSO">
+  <span class="mx-name">사용자 및 단말 등록 기반 접근 제어</span>
+  <span class="mx-id">N2SF-CD-12</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-CD-13.html" data-grades="CS">
+  <span class="mx-name">트래픽 흐름 컨텍스트 분석</span>
+  <span class="mx-id">N2SF-CD-13</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-CD-M1.html" data-grades="CSO">
+  <span class="mx-name">CDS 운용 정책 수립</span>
+  <span class="mx-id">N2SF-CD-M1</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-CD-M2.html" data-grades="CSO">
+  <span class="mx-name">CDS 통제 로그 기록 및 감사</span>
+  <span class="mx-id">N2SF-CD-M2</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-CD-M3.html" data-grades="CS">
+  <span class="mx-name">도메인 간 정보 교환 승인 프로세스</span>
+  <span class="mx-id">N2SF-CD-M3</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-CD-M4.html" data-grades="CSO">
+  <span class="mx-name">CDS 구성요소 무결성 검증</span>
+  <span class="mx-id">N2SF-CD-M4</span>
+</a>
+            </li>
+          </ul>
+        </div>
+        <div class="mx-col">
+          <a class="mx-g-head" href="groups/RA.html">
+            <b>원격접속</b>
+            <span class="en">Remote Access</span>
+            <span class="meta">RA · 10개</span>
+          </a>
+          <ul class="mx-list">
+            <li>
+              <a class="mx-card" href="controls/N2SF-RA-1.html" data-grades="CSO">
+  <span class="mx-name">원격접속 모니터링 및 통제</span>
+  <span class="mx-id">N2SF-RA-1</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-RA-2.html" data-grades="CSO">
+  <span class="mx-name">원격접속 세션 암호화</span>
+  <span class="mx-id">N2SF-RA-2</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-RA-3.html" data-grades="CS">
+  <span class="mx-name">원격접속위치통제</span>
+  <span class="mx-id">N2SF-RA-3</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-RA-4.html" data-grades="S">
+  <span class="mx-name">관리자 권한 통제</span>
+  <span class="mx-id">N2SF-RA-4</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-RA-5.html" data-grades="CSO">
+  <span class="mx-name">원격접속 정보 유출 방지</span>
+  <span class="mx-id">N2SF-RA-5</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-RA-6.html" data-grades="CSO">
+  <span class="mx-name">원격접속 자동 종료 및 비활성화</span>
+  <span class="mx-id">N2SF-RA-6</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-RA-7.html" data-grades="C">
+  <span class="mx-name">원격 명령 신뢰성 검증</span>
+  <span class="mx-id">N2SF-RA-7</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-RA-M1.html" data-grades="CS">
+  <span class="mx-name">원격접속 정책 수립 및 예외 관리</span>
+  <span class="mx-id">N2SF-RA-M1</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-RA-M2.html" data-grades="CSO">
+  <span class="mx-name">원격접속 로그 보존 및 감사</span>
+  <span class="mx-id">N2SF-RA-M2</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-RA-M3.html" data-grades="CS">
+  <span class="mx-name">원격접속 보안 점검 주기 운영</span>
+  <span class="mx-id">N2SF-RA-M3</span>
+</a>
+            </li>
+          </ul>
+        </div>
+        <div class="mx-col">
+          <a class="mx-g-head" href="groups/SN.html">
+            <b>세션</b>
+            <span class="en">Session</span>
+            <span class="meta">SN · 12개</span>
+          </a>
+          <ul class="mx-list">
+            <li>
+              <a class="mx-card" href="controls/N2SF-SN-1.html" data-grades="CSO">
+  <span class="mx-name">로그아웃 세션 처리</span>
+  <span class="mx-id">N2SF-SN-1</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-SN-2.html" data-grades="CSO">
+  <span class="mx-name">세션별 고유 식별자</span>
+  <span class="mx-id">N2SF-SN-2</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-SN-3.html" data-grades="C">
+  <span class="mx-name">동시 접속 세션 제한</span>
+  <span class="mx-id">N2SF-SN-3</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-SN-4.html" data-grades="CSO">
+  <span class="mx-name">세션 종료 <span class="mx-n">(2)</span></span>
+  <span class="mx-id">N2SF-SN-4</span>
+</a>
+              <ul class="mx-sub">
+<li><a class="mx-card sub" href="controls/N2SF-SN-4_1.html" data-grades="CSO">
+  <span class="mx-name">사용자 기반 로그아웃</span>
+  <span class="mx-id">N2SF-SN-4(1)</span>
+</a></li><li><a class="mx-card sub" href="controls/N2SF-SN-4_2.html" data-grades="CSO">
+  <span class="mx-name">종료 메시지</span>
+  <span class="mx-id">N2SF-SN-4(2)</span>
+</a></li>              </ul>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-SN-5.html" data-grades="CS">
+  <span class="mx-name">로그인 유효시간 경과 경고 메시지</span>
+  <span class="mx-id">N2SF-SN-5</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-SN-6.html" data-grades="CSO">
+  <span class="mx-name">네트워크 연결 해제</span>
+  <span class="mx-id">N2SF-SN-6</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-SN-7.html" data-grades="C">
+  <span class="mx-name">세션 중 행위 기반 비정상 탐지</span>
+  <span class="mx-id">N2SF-SN-7</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-SN-8.html" data-grades="CS">
+  <span class="mx-name">세션 중 연속 인증 수행</span>
+  <span class="mx-id">N2SF-SN-8</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-SN-M1.html" data-grades="CS">
+  <span class="mx-name">세션 관리 정책 수립</span>
+  <span class="mx-id">N2SF-SN-M1</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-SN-M2.html" data-grades="CSO">
+  <span class="mx-name">세션 감사 및 로그 기록</span>
+  <span class="mx-id">N2SF-SN-M2</span>
+</a>
+            </li>
+          </ul>
+        </div>
+        <div class="mx-col">
+          <a class="mx-g-head" href="groups/WA.html">
+            <b>무선망 접속</b>
+            <span class="en">Wireless Network Access</span>
+            <span class="meta">WA · 8개</span>
+          </a>
+          <ul class="mx-list">
+            <li>
+              <a class="mx-card" href="controls/N2SF-WA-1.html" data-grades="CSO">
+  <span class="mx-name">업무용 무선망 인증 및 암호화</span>
+  <span class="mx-id">N2SF-WA-1</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-WA-2.html" data-grades="CSO">
+  <span class="mx-name">업무용 무선망 인증정보 보호</span>
+  <span class="mx-id">N2SF-WA-2</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-WA-3.html" data-grades="C">
+  <span class="mx-name">업무용 무선망 신호 보호</span>
+  <span class="mx-id">N2SF-WA-3</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-WA-4.html" data-grades="CSO">
+  <span class="mx-name">비인가 무선장비 설치 차단</span>
+  <span class="mx-id">N2SF-WA-4</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-WA-5.html" data-grades="SO">
+  <span class="mx-name">외부인 전용 무선망 구성</span>
+  <span class="mx-id">N2SF-WA-5</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-WA-6.html" data-grades="CSO">
+  <span class="mx-name">무선망 관리기능 보호</span>
+  <span class="mx-id">N2SF-WA-6</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-WA-7.html" data-grades="CSO">
+  <span class="mx-name">비인가 무선망 접속 차단</span>
+  <span class="mx-id">N2SF-WA-7</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-WA-M1.html" data-grades="CS">
+  <span class="mx-name">무선망 세션/로그 분석</span>
+  <span class="mx-id">N2SF-WA-M1</span>
+</a>
+            </li>
+          </ul>
+        </div>
+        <div class="mx-col">
+          <a class="mx-g-head" href="groups/BC.html">
+            <b>블루투스 연결</b>
+            <span class="en">Bluetooth Connection</span>
+            <span class="meta">BC · 1개</span>
+          </a>
+          <ul class="mx-list">
+            <li>
+              <a class="mx-card" href="controls/N2SF-BC-1.html" data-grades="CS">
+  <span class="mx-name">블루투스 데이터 통신 제한</span>
+  <span class="mx-id">N2SF-BC-1</span>
+</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="mx-chapter ch-5">
+      <h2 class="mx-ch-head">제5장 데이터</h2>
+      <div class="mx-cols">
+        <div class="mx-col">
+          <a class="mx-g-head" href="groups/EK.html">
+            <b>암호 키 관리</b>
+            <span class="en">Encryption Key Management</span>
+            <span class="meta">EK · 9개</span>
+          </a>
+          <ul class="mx-list">
+            <li>
+              <a class="mx-card" href="controls/N2SF-EK-1.html" data-grades="CSO">
+  <span class="mx-name">암호 키 설정</span>
+  <span class="mx-id">N2SF-EK-1</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-EK-2.html" data-grades="CS">
+  <span class="mx-name">암호 키 생성</span>
+  <span class="mx-id">N2SF-EK-2</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-EK-3.html" data-grades="CSO">
+  <span class="mx-name">암호 키 저장</span>
+  <span class="mx-id">N2SF-EK-3</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-EK-4.html" data-grades="CS">
+  <span class="mx-name">암호 키 사용</span>
+  <span class="mx-id">N2SF-EK-4</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-EK-5.html" data-grades="CSO">
+  <span class="mx-name">암호 키 폐기</span>
+  <span class="mx-id">N2SF-EK-5</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-EK-6.html" data-grades="CSO">
+  <span class="mx-name">전자서명 검증</span>
+  <span class="mx-id">N2SF-EK-6</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-EK-M1.html" data-grades="CS">
+  <span class="mx-name">암호 키 저장소 관리</span>
+  <span class="mx-id">N2SF-EK-M1</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-EK-M2.html" data-grades="CS">
+  <span class="mx-name">암호 키 관리 정책 및 절차</span>
+  <span class="mx-id">N2SF-EK-M2</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-EK-M3.html" data-grades="CS">
+  <span class="mx-name">키 접근 권한 및 감사 관리</span>
+  <span class="mx-id">N2SF-EK-M3</span>
+</a>
+            </li>
+          </ul>
+        </div>
+        <div class="mx-col">
+          <a class="mx-g-head" href="groups/EA.html">
+            <b>암호 모듈 사용</b>
+            <span class="en">Encryption Technology Application</span>
+            <span class="meta">EA · 3개</span>
+          </a>
+          <ul class="mx-list">
+            <li>
+              <a class="mx-card" href="controls/N2SF-EA-1.html" data-grades="CSO">
+  <span class="mx-name">검증필 암호모듈 사용</span>
+  <span class="mx-id">N2SF-EA-1</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-EA-2.html" data-grades="C">
+  <span class="mx-name">국가용 암호자재 및 장비 사용</span>
+  <span class="mx-id">N2SF-EA-2</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-EA-3.html" data-grades="CS">
+  <span class="mx-name">특수목적용 외국산 암호자재 및 장비 사용</span>
+  <span class="mx-id">N2SF-EA-3</span>
+</a>
+            </li>
+          </ul>
+        </div>
+        <div class="mx-col">
+          <a class="mx-g-head" href="groups/DT.html">
+            <b>데이터 전송</b>
+            <span class="en">Data Transmission</span>
+            <span class="meta">DT · 6개</span>
+          </a>
+          <ul class="mx-list">
+            <li>
+              <a class="mx-card" href="controls/N2SF-DT-1.html" data-grades="CS">
+  <span class="mx-name">전송 권한 확인</span>
+  <span class="mx-id">N2SF-DT-1</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-DT-2.html" data-grades="CS">
+  <span class="mx-name">정보교환 중단</span>
+  <span class="mx-id">N2SF-DT-2</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-DT-3.html" data-grades="CS">
+  <span class="mx-name">전송간 암호화 적용</span>
+  <span class="mx-id">N2SF-DT-3</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-DT-4.html" data-grades="CS">
+  <span class="mx-name">메시지 외부 암호화 보호</span>
+  <span class="mx-id">N2SF-DT-4</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-DT-5.html" data-grades="C">
+  <span class="mx-name">통신 패턴 은폐 또는 무작위화</span>
+  <span class="mx-id">N2SF-DT-5</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-DT-6.html" data-grades="CS">
+  <span class="mx-name">데이터 전송 간 위변조 검증</span>
+  <span class="mx-id">N2SF-DT-6</span>
+</a>
+            </li>
+          </ul>
+        </div>
+        <div class="mx-col">
+          <a class="mx-g-head" href="groups/DU.html">
+            <b>데이터 사용</b>
+            <span class="en">Data Usage</span>
+            <span class="meta">DU · 8개</span>
+          </a>
+          <ul class="mx-list">
+            <li>
+              <a class="mx-card" href="controls/N2SF-DU-1.html" data-grades="C">
+  <span class="mx-name">오프라인 저장</span>
+  <span class="mx-id">N2SF-DU-1</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-DU-2.html" data-grades="CSO">
+  <span class="mx-name">데이터 암호화 저장</span>
+  <span class="mx-id">N2SF-DU-2</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-DU-3.html" data-grades="C">
+  <span class="mx-name">사용중 데이터 보호</span>
+  <span class="mx-id">N2SF-DU-3</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-DU-4.html" data-grades="CS">
+  <span class="mx-name">데이터 갱신 및 삭제</span>
+  <span class="mx-id">N2SF-DU-4</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-DU-M1.html" data-grades="CS">
+  <span class="mx-name">데이터 접근 제어</span>
+  <span class="mx-id">N2SF-DU-M1</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-DU-M2.html" data-grades="CS">
+  <span class="mx-name">데이터 사용 모니터링</span>
+  <span class="mx-id">N2SF-DU-M2</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-DU-M3.html" data-grades="CS">
+  <span class="mx-name">데이터 사용 정책 수립</span>
+  <span class="mx-id">N2SF-DU-M3</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-DU-M4.html" data-grades="CS">
+  <span class="mx-name">데이터 저장 무결성</span>
+  <span class="mx-id">N2SF-DU-M4</span>
+</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="mx-chapter ch-6">
+      <h2 class="mx-ch-head">제6장 정보자산</h2>
+      <div class="mx-cols">
+        <div class="mx-col">
+          <a class="mx-g-head" href="groups/MD.html">
+            <b>모바일 단말</b>
+            <span class="en">Mobile Device</span>
+            <span class="meta">MD · 13개</span>
+          </a>
+          <ul class="mx-list">
+            <li>
+              <a class="mx-card" href="controls/N2SF-MD-1.html" data-grades="CSO">
+  <span class="mx-name">모바일 코드 다운로드 및 실행 금지</span>
+  <span class="mx-id">N2SF-MD-1</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-MD-2.html" data-grades="CS">
+  <span class="mx-name">자동 실행 금지</span>
+  <span class="mx-id">N2SF-MD-2</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-MD-3.html" data-grades="CS">
+  <span class="mx-name">제한된 환경에서의 실행</span>
+  <span class="mx-id">N2SF-MD-3</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-MD-4.html" data-grades="CS">
+  <span class="mx-name">민감정보 소통 제한</span>
+  <span class="mx-id">N2SF-MD-4</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-MD-5.html" data-grades="CS">
+  <span class="mx-name">모바일 장치 암호화 기술</span>
+  <span class="mx-id">N2SF-MD-5</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-MD-6.html" data-grades="CS">
+  <span class="mx-name">데이터 자동삭제 또는 초기화</span>
+  <span class="mx-id">N2SF-MD-6</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-MD-7.html" data-grades="CSO">
+  <span class="mx-name">탈옥·루팅 탐지 및 차단</span>
+  <span class="mx-id">N2SF-MD-7</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-MD-8.html" data-grades="CS">
+  <span class="mx-name">블루투스·USB 제어 설정</span>
+  <span class="mx-id">N2SF-MD-8</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-MD-9.html" data-grades="CS">
+  <span class="mx-name">비인가 앱 탐지 및 차단</span>
+  <span class="mx-id">N2SF-MD-9</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-MD-10.html" data-grades="CS">
+  <span class="mx-name">위치 기반 보안 정책</span>
+  <span class="mx-id">N2SF-MD-10</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-MD-11.html" data-grades="C">
+  <span class="mx-name">네트워크 접근 제어</span>
+  <span class="mx-id">N2SF-MD-11</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-MD-M1.html" data-grades="CS">
+  <span class="mx-name">장비 식별 및 사용자 연동 관리</span>
+  <span class="mx-id">N2SF-MD-M1</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-MD-M2.html" data-grades="C">
+  <span class="mx-name">정책 위반 자동 조치</span>
+  <span class="mx-id">N2SF-MD-M2</span>
+</a>
+            </li>
+          </ul>
+        </div>
+        <div class="mx-col">
+          <a class="mx-g-head" href="groups/DV.html">
+            <b>하드웨어</b>
+            <span class="en">Device</span>
+            <span class="meta">DV · 14개</span>
+          </a>
+          <ul class="mx-list">
+            <li>
+              <a class="mx-card" href="controls/N2SF-DV-1.html" data-grades="CS">
+  <span class="mx-name">하드웨어 무결성 검증</span>
+  <span class="mx-id">N2SF-DV-1</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-DV-2.html" data-grades="C">
+  <span class="mx-name">하드웨어 기반 펌웨어 보호(Hardware-Based Protection)</span>
+  <span class="mx-id">N2SF-DV-2</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-DV-3.html" data-grades="CS">
+  <span class="mx-name">하드웨어 장치(Device) 사용 제한</span>
+  <span class="mx-id">N2SF-DV-3</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-DV-4.html" data-grades="CS">
+  <span class="mx-name">포트 및 입출력 장치 제어</span>
+  <span class="mx-id">N2SF-DV-4</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-DV-5.html" data-grades="C">
+  <span class="mx-name">외부 정보자산 활용 정보처리 제한</span>
+  <span class="mx-id">N2SF-DV-5</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-DV-6.html" data-grades="C">
+  <span class="mx-name">통신 기능이 포함된 저장장치 제한</span>
+  <span class="mx-id">N2SF-DV-6</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-DV-7.html" data-grades="C">
+  <span class="mx-name">기관 접속용 장치 제한</span>
+  <span class="mx-id">N2SF-DV-7</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-DV-8.html" data-grades="CSO">
+  <span class="mx-name">장치 자동 잠금</span>
+  <span class="mx-id">N2SF-DV-8</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-DV-9.html" data-grades="C">
+  <span class="mx-name">읽기 전용 매체 활용 프로그램 실행</span>
+  <span class="mx-id">N2SF-DV-9</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-DV-10.html" data-grades="C">
+  <span class="mx-name">저장장치 연결 금지</span>
+  <span class="mx-id">N2SF-DV-10</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-DV-11.html" data-grades="C">
+  <span class="mx-name">읽기 전용 매체 무결성 검증</span>
+  <span class="mx-id">N2SF-DV-11</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-DV-12.html" data-grades="C">
+  <span class="mx-name">장치 펌웨어 업데이트 검증</span>
+  <span class="mx-id">N2SF-DV-12</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-DV-M1.html" data-grades="CS">
+  <span class="mx-name">하드웨어 장치 식별 및 인벤토리</span>
+  <span class="mx-id">N2SF-DV-M1</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-DV-M2.html" data-grades="CS">
+  <span class="mx-name">반입 장치 검사 절차</span>
+  <span class="mx-id">N2SF-DV-M2</span>
+</a>
+            </li>
+          </ul>
+        </div>
+        <div class="mx-col">
+          <a class="mx-g-head" href="groups/IN.html">
+            <b>정보시스템 구성요소</b>
+            <span class="en">Information System Component</span>
+            <span class="meta">IN · 19개</span>
+          </a>
+          <ul class="mx-list">
+            <li>
+              <a class="mx-card" href="controls/N2SF-IN-1.html" data-grades="CS">
+  <span class="mx-name">구성요소 목록 중앙관리 <span class="mx-n">(3)</span></span>
+  <span class="mx-id">N2SF-IN-1</span>
+</a>
+              <ul class="mx-sub">
+<li><a class="mx-card sub" href="controls/N2SF-IN-1_1.html" data-grades="CS">
+  <span class="mx-name">정보시스템 구성요소 최신상태 유지</span>
+  <span class="mx-id">N2SF-IN-1(1)</span>
+</a></li><li><a class="mx-card sub" href="controls/N2SF-IN-1_2.html" data-grades="CS">
+  <span class="mx-name">구성요소 목록 현행화</span>
+  <span class="mx-id">N2SF-IN-1(2)</span>
+</a></li><li><a class="mx-card sub" href="controls/N2SF-IN-1_3.html" data-grades="C">
+  <span class="mx-name">구성요소 목록 자동관리</span>
+  <span class="mx-id">N2SF-IN-1(3)</span>
+</a></li>              </ul>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IN-2.html" data-grades="CS">
+  <span class="mx-name">비인가 구성요소 식별</span>
+  <span class="mx-id">N2SF-IN-2</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IN-3.html" data-grades="C">
+  <span class="mx-name">물리적 위치 식별</span>
+  <span class="mx-id">N2SF-IN-3</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IN-4.html" data-grades="CS">
+  <span class="mx-name">변경 사항 테스트 및 검증</span>
+  <span class="mx-id">N2SF-IN-4</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IN-5.html" data-grades="CS">
+  <span class="mx-name">비인가 변경 방지</span>
+  <span class="mx-id">N2SF-IN-5</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IN-6.html" data-grades="CS">
+  <span class="mx-name">불필요한 구성요소 제거</span>
+  <span class="mx-id">N2SF-IN-6</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IN-7.html" data-grades="CS">
+  <span class="mx-name">주기적인 구성요소 제거 상태 점검</span>
+  <span class="mx-id">N2SF-IN-7</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IN-8.html" data-grades="CS">
+  <span class="mx-name">비인가 소프트웨어 실행 차단</span>
+  <span class="mx-id">N2SF-IN-8</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IN-9.html" data-grades="CSO">
+  <span class="mx-name">소프트웨어 기술지원 유지</span>
+  <span class="mx-id">N2SF-IN-9</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IN-10.html" data-grades="CS">
+  <span class="mx-name">소프트웨어 설치 권한 제한</span>
+  <span class="mx-id">N2SF-IN-10</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IN-11.html" data-grades="CSO">
+  <span class="mx-name">재기동 서비스 신뢰성 확보</span>
+  <span class="mx-id">N2SF-IN-11</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IN-12.html" data-grades="CSO">
+  <span class="mx-name">신뢰성이 보장된 구성요소 설치</span>
+  <span class="mx-id">N2SF-IN-12</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IN-13.html" data-grades="CS">
+  <span class="mx-name">정보의 비지속성</span>
+  <span class="mx-id">N2SF-IN-13</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IN-14.html" data-grades="CS">
+  <span class="mx-name">연결의 비지속성</span>
+  <span class="mx-id">N2SF-IN-14</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IN-15.html" data-grades="CS">
+  <span class="mx-name">구성요소 해시/서명 무결성 검증</span>
+  <span class="mx-id">N2SF-IN-15</span>
+</a>
+            </li>
+            <li>
+              <a class="mx-card" href="controls/N2SF-IN-16.html" data-grades="CSO">
+  <span class="mx-name">악성코드 감염 차단</span>
+  <span class="mx-id">N2SF-IN-16</span>
+</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+    <footer class="footer">
+      원본 출처:
+      <a href="https://www.ncsc.go.kr:4018/main/cop/bbs/selectBoardArticle.do?bbsId=Notification_main&amp;nttId=218022" target="_blank" rel="noopener">국가 망 보안체계(N2SF) 보안 가이드라인 1.0 - 보안통제 항목 해설서(부록 1) – 국가사이버안보센터</a>
+      <span class="sep">·</span> 버전 1.0 (2025-09)
+    </footer>
+  </main>
+</div>
+
+<script src="static/js/app.js"></script>
+</body>
+</html>

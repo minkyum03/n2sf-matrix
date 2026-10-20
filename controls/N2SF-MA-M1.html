@@ -1,0 +1,1683 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>N2SF-MA-M1 - 다중인증요소 설정 및 관리 | N2SF 보안통제 매트릭스</title>
+<meta name="description" content="보안 정책 또는 조건에 따라 다중요소 인증(MFA)의 적용 대상, 방식, 조합 기준을 정의하고 주기적으로 검토 및 관리하며, MFA 설정 변경은 승인 절차를 거쳐 수행된다.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="N2SF-MA-M1 - 다중인증요소 설정 및 관리 | N2SF 보안통제 매트릭스">
+<meta property="og:description" content="보안 정책 또는 조건에 따라 다중요소 인증(MFA)의 적용 대상, 방식, 조합 기준을 정의하고 주기적으로 검토 및 관리하며, MFA 설정 변경은 승인 절차를 거쳐 수행된다.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body class="">
+
+<header class="topbar">
+  <a class="brand" href="../index.html">N2SF 보안통제 매트릭스</a>
+  <button class="menu-btn" type="button" aria-label="목차 열기" data-toggle-sidebar>☰</button>
+  <nav class="topnav">
+    <a href="../index.html" aria-current="page">매트릭스</a>
+    <a href="../controls/index.html" >전체 목록</a>
+    <a href="../data/n2sf_controls.json" download>JSON<span class="long"> 다운로드</span></a>
+  </nav>
+  <a class="source-link" href="https://www.ncsc.go.kr:4018/main/cop/bbs/selectBoardArticle.do?bbsId=Notification_main&amp;nttId=218022" target="_blank" rel="noopener">원본 출처: 국가사이버안보센터</a>
+</header>
+
+<div class="layout ">
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-title">보안통제 항목</div>
+  <details class="sb-chapter" >
+    <summary>제1장 권한</summary>
+    <details class="sb-group" >
+      <summary >
+        <span class="code">LP</span> 최소 권한
+      </summary>
+      <ul>
+        <li><a class="sb-overview" href="../groups/LP.html">그룹 개요</a></li>
+        <li class="">
+          <a href="../controls/N2SF-LP-1.html"
+>
+            <span class="num">1</span> 정보시스템 접근 권한 정의</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-LP-2.html"
+>
+            <span class="num">2</span> 보안통제 권한 제한</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-LP-3.html"
+>
+            <span class="num">3</span> 보안통제 계정 노출 방지</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-LP-4.html"
+>
+            <span class="num">4</span> 관리자 권한 제한</a>
+        </li>
+        <li class="sub">
+          <a href="../controls/N2SF-LP-4_1.html"
+>
+            <span class="num">4(1)</span> 원격접속을 통한 관리자 권한 접속제한</a>
+        </li>
+        <li class="sub">
+          <a href="../controls/N2SF-LP-4_2.html"
+>
+            <span class="num">4(2)</span> 기관 이외 인원의 관리자 권한 제한</a>
+        </li>
+        <li class="sub">
+          <a href="../controls/N2SF-LP-4_3.html"
+>
+            <span class="num">4(3)</span> 사용자에게 부여된 관리자 권한 관리</a>
+        </li>
+        <li class="sub">
+          <a href="../controls/N2SF-LP-4_4.html"
+>
+            <span class="num">4(4)</span> 관리자 권한 실행 로깅 및 감사</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-LP-5.html"
+>
+            <span class="num">5</span> 코드 실행권한 제한</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-LP-M1.html"
+>
+            <span class="num">M1</span> 특별권한 사용자 지정</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-LP-M2.html"
+>
+            <span class="num">M2</span> 주요 사용자 위험 관리</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-LP-M3.html"
+>
+            <span class="num">M3</span> 접근권한 사전 설정</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-LP-M4.html"
+>
+            <span class="num">M4</span> 접근권한과 정보 연계</a>
+        </li>
+      </ul>
+    </details>
+    <details class="sb-group" >
+      <summary >
+        <span class="code">IV</span> 신원 검증
+      </summary>
+      <ul>
+        <li><a class="sb-overview" href="../groups/IV.html">그룹 개요</a></li>
+        <li class="">
+          <a href="../controls/N2SF-IV-1.html"
+>
+            <span class="num">1</span> 관리자 승인</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IV-2.html"
+>
+            <span class="num">2</span> 신원 증거 제출</a>
+        </li>
+        <li class="sub">
+          <a href="../controls/N2SF-IV-2_1.html"
+>
+            <span class="num">2(1)</span> 신원 증거 검증</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IV-3.html"
+>
+            <span class="num">3</span> 외부 신원 검증 수용</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IV-M1.html"
+>
+            <span class="num">M1</span> 대면 신원 증거 검증</a>
+        </li>
+      </ul>
+    </details>
+    <details class="sb-group" >
+      <summary >
+        <span class="code">IM</span> 식별자 관리
+      </summary>
+      <ul>
+        <li><a class="sb-overview" href="../groups/IM.html">그룹 개요</a></li>
+        <li class="">
+          <a href="../controls/N2SF-IM-1.html"
+>
+            <span class="num">1</span> 공개된 식별자의 계정 사용 금지</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IM-2.html"
+>
+            <span class="num">2</span> 사용자 상태 식별</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IM-3.html"
+>
+            <span class="num">3</span> 기관 간 상호 관리</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IM-4.html"
+>
+            <span class="num">4</span> 상호(쌍, Pairwise) 가명 식별자</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IM-5.html"
+>
+            <span class="num">5</span> 속성 유지관리 및 보호</a>
+        </li>
+      </ul>
+    </details>
+    <details class="sb-group" >
+      <summary >
+        <span class="code">AC</span> 계정 관리
+      </summary>
+      <ul>
+        <li><a class="sb-overview" href="../groups/AC.html">그룹 개요</a></li>
+        <li class="">
+          <a href="../controls/N2SF-AC-1.html"
+>
+            <span class="num">1</span> 계정 관리 자동화</a>
+        </li>
+        <li class="sub">
+          <a href="../controls/N2SF-AC-1_1.html"
+>
+            <span class="num">1(1)</span> 동적 계정 관리</a>
+        </li>
+        <li class="sub">
+          <a href="../controls/N2SF-AC-1_2.html"
+>
+            <span class="num">1(2)</span> 계정 상태 모니터링</a>
+        </li>
+        <li class="sub">
+          <a href="../controls/N2SF-AC-1_3.html"
+>
+            <span class="num">1(3)</span> 계정 자동 비활성화</a>
+        </li>
+        <li class="sub">
+          <a href="../controls/N2SF-AC-1_4.html"
+>
+            <span class="num">1(4)</span> 계정 자동 로그아웃</a>
+        </li>
+        <li class="sub">
+          <a href="../controls/N2SF-AC-1_5.html"
+>
+            <span class="num">1(5)</span> 불필요한 관리자 권한 계정 제거</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-AC-2.html"
+>
+            <span class="num">2</span> 공유 및 그룹 계정 사용 제한</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-AC-3.html"
+>
+            <span class="num">3</span> 의심스러운 계정 모니터링</a>
+        </li>
+        <li class="sub">
+          <a href="../controls/N2SF-AC-3_1.html"
+>
+            <span class="num">3(1)</span> 위험에 노출된 계정 비활성화</a>
+        </li>
+        <li class="sub">
+          <a href="../controls/N2SF-AC-3_2.html"
+>
+            <span class="num">3(2)</span> 내부 사용자 모니터링</a>
+        </li>
+        <li class="sub">
+          <a href="../controls/N2SF-AC-3_3.html"
+>
+            <span class="num">3(3)</span> 외부 사용자 모니터링</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-AC-M1.html"
+>
+            <span class="num">M1</span> 감사 활동 자동화</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-AC-M2.html"
+>
+            <span class="num">M2</span> 감사 기록 생성</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-AC-M3.html"
+>
+            <span class="num">M3</span> 세션 감사</a>
+        </li>
+      </ul>
+    </details>
+  </details>
+  <details class="sb-chapter" open>
+    <summary>제2장 인증</summary>
+    <details class="sb-group" open>
+      <summary >
+        <span class="code">MA</span> 다중요소 인증
+      </summary>
+      <ul>
+        <li><a class="sb-overview" href="../groups/MA.html">그룹 개요</a></li>
+        <li class="">
+          <a href="../controls/N2SF-MA-1.html"
+>
+            <span class="num">1</span> 관리자 계정 다중요소 인증(MFA, Multi-factor Authentication)</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-MA-2.html"
+>
+            <span class="num">2</span> 사용자 계정 다중요소 인증(MFA, Multi-factor Authentication)</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-MA-3.html"
+>
+            <span class="num">3</span> 다중요소 인증 장치 분리</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-MA-4.html"
+>
+            <span class="num">4</span> 다중요소 인증(MFA, Multi-factor Authentication) 경로 분리</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-MA-5.html"
+>
+            <span class="num">5</span> 특정상황에서의 다중요소 인증</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-MA-M1.html"
+class="current" aria-current="page">
+            <span class="num">M1</span> 다중인증요소 설정 및 관리</a>
+        </li>
+      </ul>
+    </details>
+    <details class="sb-group" >
+      <summary >
+        <span class="code">EI</span> 외부인증수단
+      </summary>
+      <ul>
+        <li><a class="sb-overview" href="../groups/EI.html">그룹 개요</a></li>
+        <li class="">
+          <a href="../controls/N2SF-EI-1.html"
+>
+            <span class="num">1</span> 외부 자격증명 수단 활용</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-EI-2.html"
+>
+            <span class="num">2</span> 외부 인증수단 활용</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-EI-M1.html"
+>
+            <span class="num">M1</span> 외부 인증수단 관리</a>
+        </li>
+      </ul>
+    </details>
+    <details class="sb-group" >
+      <summary >
+        <span class="code">DA</span> 단말인증
+      </summary>
+      <ul>
+        <li><a class="sb-overview" href="../groups/DA.html">그룹 개요</a></li>
+        <li class="">
+          <a href="../controls/N2SF-DA-1.html"
+>
+            <span class="num">1</span> 단말 무결성 검증</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-DA-2.html"
+>
+            <span class="num">2</span> 정보서비스 식별 및 제한</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-DA-3.html"
+>
+            <span class="num">3</span> 단말 식별 및 인증</a>
+        </li>
+        <li class="sub">
+          <a href="../controls/N2SF-DA-3_1.html"
+>
+            <span class="num">3(1)</span> 인가 단말 인증</a>
+        </li>
+        <li class="sub">
+          <a href="../controls/N2SF-DA-3_2.html"
+>
+            <span class="num">3(2)</span> 비인가 단말 인증</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-DA-4.html"
+>
+            <span class="num">4</span> 인증된 단말의 접속 관리</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-DA-5.html"
+>
+            <span class="num">5</span> 외부 단말 접속 제어</a>
+        </li>
+      </ul>
+    </details>
+    <details class="sb-group" >
+      <summary >
+        <span class="code">AU</span> 인증보호
+      </summary>
+      <ul>
+        <li><a class="sb-overview" href="../groups/AU.html">그룹 개요</a></li>
+        <li class="">
+          <a href="../controls/N2SF-AU-1.html"
+>
+            <span class="num">1</span> 계정 인증 재전송 공격 방지</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-AU-2.html"
+>
+            <span class="num">2</span> 통합인증(SSO, Single Sign-on) 보호</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-AU-3.html"
+>
+            <span class="num">3</span> 권한 위임 토큰(OAuth) 보호</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-AU-4.html"
+>
+            <span class="num">4</span> 생체인증 공격 방지</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-AU-5.html"
+>
+            <span class="num">5</span> 인증시스템 구성 및 관리</a>
+        </li>
+        <li class="sub">
+          <a href="../controls/N2SF-AU-5_1.html"
+>
+            <span class="num">5(1)</span> 비밀번호 보안 수준 점검</a>
+        </li>
+        <li class="sub">
+          <a href="../controls/N2SF-AU-5_2.html"
+>
+            <span class="num">5(2)</span> 대체 보안 수단 강구</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-AU-6.html"
+>
+            <span class="num">6</span> 공개키 기반 구조(PKI) 인증서 관리</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-AU-M1.html"
+>
+            <span class="num">M1</span> 인증정보 접근 권한 통제 및 관리</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-AU-M2.html"
+>
+            <span class="num">M2</span> 인증 위협 및 취약점 관리</a>
+        </li>
+      </ul>
+    </details>
+    <details class="sb-group" >
+      <summary >
+        <span class="code">AP</span> 인증정책
+      </summary>
+      <ul>
+        <li><a class="sb-overview" href="../groups/AP.html">그룹 개요</a></li>
+        <li class="">
+          <a href="../controls/N2SF-AP-1.html"
+>
+            <span class="num">1</span> 기관 발급 증명수단 인증 활용</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-AP-2.html"
+>
+            <span class="num">2</span> 인증 프로파일 활용</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-AP-3.html"
+>
+            <span class="num">3</span> 그룹 계정 사용자 인증</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-AP-4.html"
+>
+            <span class="num">4</span> 재인증</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-AP-5.html"
+>
+            <span class="num">5</span> 동시 중복인증 차단</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-AP-M1.html"
+>
+            <span class="num">M1</span> 인증 정책 수립 및 절차 관리</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-AP-M2.html"
+>
+            <span class="num">M2</span> 인증 관리자의 역할 및 책임 관리</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-AP-M3.html"
+>
+            <span class="num">M3</span> 인증 관련 보안사고 대응체계</a>
+        </li>
+      </ul>
+    </details>
+    <details class="sb-group" >
+      <summary >
+        <span class="code">AM</span> 인증수단
+      </summary>
+      <ul>
+        <li><a class="sb-overview" href="../groups/AM.html">그룹 개요</a></li>
+        <li class="">
+          <a href="../controls/N2SF-AM-1.html"
+>
+            <span class="num">1</span> 암호모듈 기반 인증</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-AM-2.html"
+>
+            <span class="num">2</span> 비밀번호 기반 인증</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-AM-3.html"
+>
+            <span class="num">3</span> 공개키 기반 인증</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-AM-4.html"
+>
+            <span class="num">4</span> 초기 인증수단 변경</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-AM-5.html"
+>
+            <span class="num">5</span> 인증수단 보호</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-AM-6.html"
+>
+            <span class="num">6</span> 암호화되지 않은 인증수단 내장 금지</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-AM-7.html"
+>
+            <span class="num">7</span> 캐시된 인증수단 재사용 차단</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-AM-8.html"
+>
+            <span class="num">8</span> 공개키 기반 저장소 관리</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-AM-9.html"
+>
+            <span class="num">9</span> 소유기반 인증</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-AM-M1.html"
+>
+            <span class="num">M1</span> 인증시스템 운영 감사</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-AM-M2.html"
+>
+            <span class="num">M2</span> 인증수단 정기적 보안 평가</a>
+        </li>
+      </ul>
+    </details>
+    <details class="sb-group" >
+      <summary >
+        <span class="code">LI</span> 로그인
+      </summary>
+      <ul>
+        <li><a class="sb-overview" href="../groups/LI.html">그룹 개요</a></li>
+        <li class="">
+          <a href="../controls/N2SF-LI-1.html"
+>
+            <span class="num">1</span> 유효한 인증정보 노출 방지</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-LI-2.html"
+>
+            <span class="num">2</span> 로그인 실패에 따른 접속 제한</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-LI-3.html"
+>
+            <span class="num">3</span> 로그인 실패에 따른 인증 요소 추가</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-LI-4.html"
+>
+            <span class="num">4</span> 계정 잠금 해제 인증 요소 추가</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-LI-5.html"
+>
+            <span class="num">5</span> 정보시스템 사용 알림</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-LI-6.html"
+>
+            <span class="num">6</span> 직전 로그인 정보 알림</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-LI-7.html"
+>
+            <span class="num">7</span> 실패 로그인 정보 알림</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-LI-8.html"
+>
+            <span class="num">8</span> 로그인 이력 정보 제공</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-LI-9.html"
+>
+            <span class="num">9</span> 계정 정보 변경 알림</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-LI-10.html"
+>
+            <span class="num">10</span> 로그인 부가 정보 제공</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-LI-M1.html"
+>
+            <span class="num">M1</span> 로그인 실패 모니터링 및 보고</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-LI-M2.html"
+>
+            <span class="num">M2</span> 주기적 로그인 정보 무결성 점검</a>
+        </li>
+      </ul>
+    </details>
+  </details>
+  <details class="sb-chapter" >
+    <summary>제3장 분리 및 격리</summary>
+    <details class="sb-group" >
+      <summary >
+        <span class="code">SG</span> 분리
+      </summary>
+      <ul>
+        <li><a class="sb-overview" href="../groups/SG.html">그룹 개요</a></li>
+        <li class="">
+          <a href="../controls/N2SF-SG-1.html"
+>
+            <span class="num">1</span> 하드웨어 기반 분리</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-SG-2.html"
+>
+            <span class="num">2</span> 운영체제(OS) 기반 분리</a>
+        </li>
+        <li class="sub">
+          <a href="../controls/N2SF-SG-2_1.html"
+>
+            <span class="num">2(1)</span> 시스템 파티셔닝</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-SG-3.html"
+>
+            <span class="num">3</span> 소프트웨어 기반 분리</a>
+        </li>
+        <li class="sub">
+          <a href="../controls/N2SF-SG-3_1.html"
+>
+            <span class="num">3(1)</span> 프로세스 기반 분리</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-SG-4.html"
+>
+            <span class="num">4</span> IP체계 분리</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-SG-5.html"
+>
+            <span class="num">5</span> 보안･운영관리 인프라 분리</a>
+        </li>
+        <li class="sub">
+          <a href="../controls/N2SF-SG-5_1.html"
+>
+            <span class="num">5(1)</span> 개발/테스트 환경 분리</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-SG-6.html"
+>
+            <span class="num">6</span> 보안 기능과 사용자 기능 분리</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-SG-M1.html"
+>
+            <span class="num">M1</span> 분리 정책 및 절차 수립</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-SG-M2.html"
+>
+            <span class="num">M2</span> 보안·운영 인프라 접근 책임 및 역할 관리</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-SG-M3.html"
+>
+            <span class="num">M3</span> 분리된 시스템 정기적 평가 및 감사</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-SG-M4.html"
+>
+            <span class="num">M4</span> 분리 환경 접근 권한 관리 및 모니터링</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-SG-M5.html"
+>
+            <span class="num">M5</span> 분리 위반사항 대응체계 운영</a>
+        </li>
+      </ul>
+    </details>
+    <details class="sb-group" >
+      <summary >
+        <span class="code">IS</span> 격리
+      </summary>
+      <ul>
+        <li><a class="sb-overview" href="../groups/IS.html">그룹 개요</a></li>
+        <li class="">
+          <a href="../controls/N2SF-IS-1.html"
+>
+            <span class="num">1</span> 프로세스 격리</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IS-2.html"
+>
+            <span class="num">2</span> 정보시스템 운영･관리 기능 표출 제한</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IS-3.html"
+>
+            <span class="num">3</span> 애플리케이션 논리적 격리</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IS-4.html"
+>
+            <span class="num">4</span> 네트워크 격리</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IS-5.html"
+>
+            <span class="num">5</span> 가상화 환경 격리</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IS-6.html"
+>
+            <span class="num">6</span> 격리 위반사항 대응체계 운영</a>
+        </li>
+      </ul>
+    </details>
+  </details>
+  <details class="sb-chapter" >
+    <summary>제4장 통제</summary>
+    <details class="sb-group" >
+      <summary >
+        <span class="code">IF</span> 정보흐름
+      </summary>
+      <ul>
+        <li><a class="sb-overview" href="../groups/IF.html">그룹 개요</a></li>
+        <li class="">
+          <a href="../controls/N2SF-IF-1.html"
+>
+            <span class="num">1</span> 정보흐름의 동적 통제</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IF-2.html"
+>
+            <span class="num">2</span> 암호화된 정보흐름 통제</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IF-3.html"
+>
+            <span class="num">3</span> 임베디드 데이터 삽입 차단</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IF-4.html"
+>
+            <span class="num">4</span> 메타데이터 활용 정보흐름 통제</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IF-5.html"
+>
+            <span class="num">5</span> 일방향 정보흐름 통제</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IF-6.html"
+>
+            <span class="num">6</span> 필터링 규칙 정보흐름 통제</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IF-7.html"
+>
+            <span class="num">7</span> 데이터 유형 식별자 통제</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IF-8.html"
+>
+            <span class="num">8</span> 인가되지 않은 정보 전송 통제</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IF-9.html"
+>
+            <span class="num">9</span> 출발지점과 도착지점 식별 및 인증</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IF-10.html"
+>
+            <span class="num">10</span> 정보 전송 방식 제한</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IF-11.html"
+>
+            <span class="num">11</span> 데이터 전송 차단</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IF-12.html"
+>
+            <span class="num">12</span> 정보흐름 통제 기능 유지</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IF-13.html"
+>
+            <span class="num">13</span> 시간 기반/상황 기반 흐름 제한</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IF-14.html"
+>
+            <span class="num">14</span> 보안등급기반 흐름 통제</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IF-15.html"
+>
+            <span class="num">15</span> 전용 통신망 구성</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IF-M1.html"
+>
+            <span class="num">M1</span> 정보흐름 통제 정책 수립 및 갱신</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IF-M2.html"
+>
+            <span class="num">M2</span> 정보흐름 로그 기록 및 보존</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IF-M3.html"
+>
+            <span class="num">M3</span> 정보흐름 통제 감사 및 이행 점검</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IF-M4.html"
+>
+            <span class="num">M4</span> 비인가 흐름 탐지 자동화</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IF-M5.html"
+>
+            <span class="num">M5</span> 통제 실패·예외 보고 체계</a>
+        </li>
+      </ul>
+    </details>
+    <details class="sb-group" >
+      <summary >
+        <span class="code">EB</span> 외부경계
+      </summary>
+      <ul>
+        <li><a class="sb-overview" href="../groups/EB.html">그룹 개요</a></li>
+        <li class="">
+          <a href="../controls/N2SF-EB-1.html"
+>
+            <span class="num">1</span> 연결 접점 제한</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-EB-2.html"
+>
+            <span class="num">2</span> 서비스별 외부 통신 통제</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-EB-3.html"
+>
+            <span class="num">3</span> 화이트리스트 기반 통신 허용</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-EB-4.html"
+>
+            <span class="num">4</span> 분할 터널링(Split Tunneling) 제한</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-EB-5.html"
+>
+            <span class="num">5</span> 통신 경유(proxy) 강제화</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-EB-6.html"
+>
+            <span class="num">6</span> 외부로의 사이버 위협 통신 발신 제한</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-EB-7.html"
+>
+            <span class="num">7</span> 호스트 기반 경계 보호</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-EB-8.html"
+>
+            <span class="num">8</span> 운영관리용 포트의 물리적 연결 차단</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-EB-9.html"
+>
+            <span class="num">9</span> 전용 장치를 통한 관리자 권한 접속</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-EB-10.html"
+>
+            <span class="num">10</span> 정보시스템 구성 요소 외부 노출 차단</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-EB-11.html"
+>
+            <span class="num">11</span> 외부 경계 보호 기능 유지</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-EB-12.html"
+>
+            <span class="num">12</span> 외부 통신용 정보자산(장치) 설치 금지</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-EB-13.html"
+>
+            <span class="num">13</span> 오류정보 발신자 전송 제한</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-EB-14.html"
+>
+            <span class="num">14</span> 외부 DNS 통신 제한</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-EB-15.html"
+>
+            <span class="num">15</span> 우회 통신 수단 탐지 및 차단</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-EB-M1.html"
+>
+            <span class="num">M1</span> 개인 식별 정보 보호</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-EB-M2.html"
+>
+            <span class="num">M2</span> 외부 경계 정책 수립 및 갱신</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-EB-M3.html"
+>
+            <span class="num">M3</span> 외부 통신 로그 기록 및 감사</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-EB-M4.html"
+>
+            <span class="num">M4</span> 외부 경계 위협 탐지 자동화</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-EB-M5.html"
+>
+            <span class="num">M5</span> 비상 시 외부 통신 격리</a>
+        </li>
+      </ul>
+    </details>
+    <details class="sb-group" >
+      <summary >
+        <span class="code">CD</span> CDS
+      </summary>
+      <ul>
+        <li><a class="sb-overview" href="../groups/CD.html">그룹 개요</a></li>
+        <li class="">
+          <a href="../controls/N2SF-CD-1.html"
+>
+            <span class="num">1</span> 도메인 간 정보 흐름 검증 및 통제</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-CD-2.html"
+>
+            <span class="num">2</span> 다단계 보안 레이블 적용</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-CD-3.html"
+>
+            <span class="num">3</span> 일방향 전송 기술 적용 (Data Diode)</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-CD-4.html"
+>
+            <span class="num">4</span> 검증 기반 릴레이 시스템 적용</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-CD-5.html"
+>
+            <span class="num">5</span> 파일 유형 기반 전송 정책</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-CD-6.html"
+>
+            <span class="num">6</span> 콘텐츠 무해화 (CDR) 적용</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-CD-7.html"
+>
+            <span class="num">7</span> 메타데이터 기반 통제 정책</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-CD-8.html"
+>
+            <span class="num">8</span> 승인된 CDS 구성 요소만 사용</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-CD-9.html"
+>
+            <span class="num">9</span> CDS 우회 경로 탐지 및 차단</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-CD-10.html"
+>
+            <span class="num">10</span> 전송 실패 보호 및 무결성 보장</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-CD-11.html"
+>
+            <span class="num">11</span> 등급 간 콘텐츠 정책 적용</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-CD-12.html"
+>
+            <span class="num">12</span> 사용자 및 단말 등록 기반 접근 제어</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-CD-13.html"
+>
+            <span class="num">13</span> 트래픽 흐름 컨텍스트 분석</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-CD-M1.html"
+>
+            <span class="num">M1</span> CDS 운용 정책 수립</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-CD-M2.html"
+>
+            <span class="num">M2</span> CDS 통제 로그 기록 및 감사</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-CD-M3.html"
+>
+            <span class="num">M3</span> 도메인 간 정보 교환 승인 프로세스</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-CD-M4.html"
+>
+            <span class="num">M4</span> CDS 구성요소 무결성 검증</a>
+        </li>
+      </ul>
+    </details>
+    <details class="sb-group" >
+      <summary >
+        <span class="code">RA</span> 원격접속
+      </summary>
+      <ul>
+        <li><a class="sb-overview" href="../groups/RA.html">그룹 개요</a></li>
+        <li class="">
+          <a href="../controls/N2SF-RA-1.html"
+>
+            <span class="num">1</span> 원격접속 모니터링 및 통제</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-RA-2.html"
+>
+            <span class="num">2</span> 원격접속 세션 암호화</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-RA-3.html"
+>
+            <span class="num">3</span> 원격접속위치통제</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-RA-4.html"
+>
+            <span class="num">4</span> 관리자 권한 통제</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-RA-5.html"
+>
+            <span class="num">5</span> 원격접속 정보 유출 방지</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-RA-6.html"
+>
+            <span class="num">6</span> 원격접속 자동 종료 및 비활성화</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-RA-7.html"
+>
+            <span class="num">7</span> 원격 명령 신뢰성 검증</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-RA-M1.html"
+>
+            <span class="num">M1</span> 원격접속 정책 수립 및 예외 관리</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-RA-M2.html"
+>
+            <span class="num">M2</span> 원격접속 로그 보존 및 감사</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-RA-M3.html"
+>
+            <span class="num">M3</span> 원격접속 보안 점검 주기 운영</a>
+        </li>
+      </ul>
+    </details>
+    <details class="sb-group" >
+      <summary >
+        <span class="code">SN</span> 세션
+      </summary>
+      <ul>
+        <li><a class="sb-overview" href="../groups/SN.html">그룹 개요</a></li>
+        <li class="">
+          <a href="../controls/N2SF-SN-1.html"
+>
+            <span class="num">1</span> 로그아웃 세션 처리</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-SN-2.html"
+>
+            <span class="num">2</span> 세션별 고유 식별자</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-SN-3.html"
+>
+            <span class="num">3</span> 동시 접속 세션 제한</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-SN-4.html"
+>
+            <span class="num">4</span> 세션 종료</a>
+        </li>
+        <li class="sub">
+          <a href="../controls/N2SF-SN-4_1.html"
+>
+            <span class="num">4(1)</span> 사용자 기반 로그아웃</a>
+        </li>
+        <li class="sub">
+          <a href="../controls/N2SF-SN-4_2.html"
+>
+            <span class="num">4(2)</span> 종료 메시지</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-SN-5.html"
+>
+            <span class="num">5</span> 로그인 유효시간 경과 경고 메시지</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-SN-6.html"
+>
+            <span class="num">6</span> 네트워크 연결 해제</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-SN-7.html"
+>
+            <span class="num">7</span> 세션 중 행위 기반 비정상 탐지</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-SN-8.html"
+>
+            <span class="num">8</span> 세션 중 연속 인증 수행</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-SN-M1.html"
+>
+            <span class="num">M1</span> 세션 관리 정책 수립</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-SN-M2.html"
+>
+            <span class="num">M2</span> 세션 감사 및 로그 기록</a>
+        </li>
+      </ul>
+    </details>
+    <details class="sb-group" >
+      <summary >
+        <span class="code">WA</span> 무선망 접속
+      </summary>
+      <ul>
+        <li><a class="sb-overview" href="../groups/WA.html">그룹 개요</a></li>
+        <li class="">
+          <a href="../controls/N2SF-WA-1.html"
+>
+            <span class="num">1</span> 업무용 무선망 인증 및 암호화</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-WA-2.html"
+>
+            <span class="num">2</span> 업무용 무선망 인증정보 보호</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-WA-3.html"
+>
+            <span class="num">3</span> 업무용 무선망 신호 보호</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-WA-4.html"
+>
+            <span class="num">4</span> 비인가 무선장비 설치 차단</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-WA-5.html"
+>
+            <span class="num">5</span> 외부인 전용 무선망 구성</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-WA-6.html"
+>
+            <span class="num">6</span> 무선망 관리기능 보호</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-WA-7.html"
+>
+            <span class="num">7</span> 비인가 무선망 접속 차단</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-WA-M1.html"
+>
+            <span class="num">M1</span> 무선망 세션/로그 분석</a>
+        </li>
+      </ul>
+    </details>
+    <details class="sb-group" >
+      <summary >
+        <span class="code">BC</span> 블루투스 연결
+      </summary>
+      <ul>
+        <li><a class="sb-overview" href="../groups/BC.html">그룹 개요</a></li>
+        <li class="">
+          <a href="../controls/N2SF-BC-1.html"
+>
+            <span class="num">1</span> 블루투스 데이터 통신 제한</a>
+        </li>
+      </ul>
+    </details>
+  </details>
+  <details class="sb-chapter" >
+    <summary>제5장 데이터</summary>
+    <details class="sb-group" >
+      <summary >
+        <span class="code">EK</span> 암호 키 관리
+      </summary>
+      <ul>
+        <li><a class="sb-overview" href="../groups/EK.html">그룹 개요</a></li>
+        <li class="">
+          <a href="../controls/N2SF-EK-1.html"
+>
+            <span class="num">1</span> 암호 키 설정</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-EK-2.html"
+>
+            <span class="num">2</span> 암호 키 생성</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-EK-3.html"
+>
+            <span class="num">3</span> 암호 키 저장</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-EK-4.html"
+>
+            <span class="num">4</span> 암호 키 사용</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-EK-5.html"
+>
+            <span class="num">5</span> 암호 키 폐기</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-EK-6.html"
+>
+            <span class="num">6</span> 전자서명 검증</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-EK-M1.html"
+>
+            <span class="num">M1</span> 암호 키 저장소 관리</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-EK-M2.html"
+>
+            <span class="num">M2</span> 암호 키 관리 정책 및 절차</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-EK-M3.html"
+>
+            <span class="num">M3</span> 키 접근 권한 및 감사 관리</a>
+        </li>
+      </ul>
+    </details>
+    <details class="sb-group" >
+      <summary >
+        <span class="code">EA</span> 암호 모듈 사용
+      </summary>
+      <ul>
+        <li><a class="sb-overview" href="../groups/EA.html">그룹 개요</a></li>
+        <li class="">
+          <a href="../controls/N2SF-EA-1.html"
+>
+            <span class="num">1</span> 검증필 암호모듈 사용</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-EA-2.html"
+>
+            <span class="num">2</span> 국가용 암호자재 및 장비 사용</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-EA-3.html"
+>
+            <span class="num">3</span> 특수목적용 외국산 암호자재 및 장비 사용</a>
+        </li>
+      </ul>
+    </details>
+    <details class="sb-group" >
+      <summary >
+        <span class="code">DT</span> 데이터 전송
+      </summary>
+      <ul>
+        <li><a class="sb-overview" href="../groups/DT.html">그룹 개요</a></li>
+        <li class="">
+          <a href="../controls/N2SF-DT-1.html"
+>
+            <span class="num">1</span> 전송 권한 확인</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-DT-2.html"
+>
+            <span class="num">2</span> 정보교환 중단</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-DT-3.html"
+>
+            <span class="num">3</span> 전송간 암호화 적용</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-DT-4.html"
+>
+            <span class="num">4</span> 메시지 외부 암호화 보호</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-DT-5.html"
+>
+            <span class="num">5</span> 통신 패턴 은폐 또는 무작위화</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-DT-6.html"
+>
+            <span class="num">6</span> 데이터 전송 간 위변조 검증</a>
+        </li>
+      </ul>
+    </details>
+    <details class="sb-group" >
+      <summary >
+        <span class="code">DU</span> 데이터 사용
+      </summary>
+      <ul>
+        <li><a class="sb-overview" href="../groups/DU.html">그룹 개요</a></li>
+        <li class="">
+          <a href="../controls/N2SF-DU-1.html"
+>
+            <span class="num">1</span> 오프라인 저장</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-DU-2.html"
+>
+            <span class="num">2</span> 데이터 암호화 저장</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-DU-3.html"
+>
+            <span class="num">3</span> 사용중 데이터 보호</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-DU-4.html"
+>
+            <span class="num">4</span> 데이터 갱신 및 삭제</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-DU-M1.html"
+>
+            <span class="num">M1</span> 데이터 접근 제어</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-DU-M2.html"
+>
+            <span class="num">M2</span> 데이터 사용 모니터링</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-DU-M3.html"
+>
+            <span class="num">M3</span> 데이터 사용 정책 수립</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-DU-M4.html"
+>
+            <span class="num">M4</span> 데이터 저장 무결성</a>
+        </li>
+      </ul>
+    </details>
+  </details>
+  <details class="sb-chapter" >
+    <summary>제6장 정보자산</summary>
+    <details class="sb-group" >
+      <summary >
+        <span class="code">MD</span> 모바일 단말
+      </summary>
+      <ul>
+        <li><a class="sb-overview" href="../groups/MD.html">그룹 개요</a></li>
+        <li class="">
+          <a href="../controls/N2SF-MD-1.html"
+>
+            <span class="num">1</span> 모바일 코드 다운로드 및 실행 금지</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-MD-2.html"
+>
+            <span class="num">2</span> 자동 실행 금지</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-MD-3.html"
+>
+            <span class="num">3</span> 제한된 환경에서의 실행</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-MD-4.html"
+>
+            <span class="num">4</span> 민감정보 소통 제한</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-MD-5.html"
+>
+            <span class="num">5</span> 모바일 장치 암호화 기술</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-MD-6.html"
+>
+            <span class="num">6</span> 데이터 자동삭제 또는 초기화</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-MD-7.html"
+>
+            <span class="num">7</span> 탈옥·루팅 탐지 및 차단</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-MD-8.html"
+>
+            <span class="num">8</span> 블루투스·USB 제어 설정</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-MD-9.html"
+>
+            <span class="num">9</span> 비인가 앱 탐지 및 차단</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-MD-10.html"
+>
+            <span class="num">10</span> 위치 기반 보안 정책</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-MD-11.html"
+>
+            <span class="num">11</span> 네트워크 접근 제어</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-MD-M1.html"
+>
+            <span class="num">M1</span> 장비 식별 및 사용자 연동 관리</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-MD-M2.html"
+>
+            <span class="num">M2</span> 정책 위반 자동 조치</a>
+        </li>
+      </ul>
+    </details>
+    <details class="sb-group" >
+      <summary >
+        <span class="code">DV</span> 하드웨어
+      </summary>
+      <ul>
+        <li><a class="sb-overview" href="../groups/DV.html">그룹 개요</a></li>
+        <li class="">
+          <a href="../controls/N2SF-DV-1.html"
+>
+            <span class="num">1</span> 하드웨어 무결성 검증</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-DV-2.html"
+>
+            <span class="num">2</span> 하드웨어 기반 펌웨어 보호(Hardware-Based Protection)</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-DV-3.html"
+>
+            <span class="num">3</span> 하드웨어 장치(Device) 사용 제한</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-DV-4.html"
+>
+            <span class="num">4</span> 포트 및 입출력 장치 제어</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-DV-5.html"
+>
+            <span class="num">5</span> 외부 정보자산 활용 정보처리 제한</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-DV-6.html"
+>
+            <span class="num">6</span> 통신 기능이 포함된 저장장치 제한</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-DV-7.html"
+>
+            <span class="num">7</span> 기관 접속용 장치 제한</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-DV-8.html"
+>
+            <span class="num">8</span> 장치 자동 잠금</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-DV-9.html"
+>
+            <span class="num">9</span> 읽기 전용 매체 활용 프로그램 실행</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-DV-10.html"
+>
+            <span class="num">10</span> 저장장치 연결 금지</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-DV-11.html"
+>
+            <span class="num">11</span> 읽기 전용 매체 무결성 검증</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-DV-12.html"
+>
+            <span class="num">12</span> 장치 펌웨어 업데이트 검증</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-DV-M1.html"
+>
+            <span class="num">M1</span> 하드웨어 장치 식별 및 인벤토리</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-DV-M2.html"
+>
+            <span class="num">M2</span> 반입 장치 검사 절차</a>
+        </li>
+      </ul>
+    </details>
+    <details class="sb-group" >
+      <summary >
+        <span class="code">IN</span> 정보시스템 구성요소
+      </summary>
+      <ul>
+        <li><a class="sb-overview" href="../groups/IN.html">그룹 개요</a></li>
+        <li class="">
+          <a href="../controls/N2SF-IN-1.html"
+>
+            <span class="num">1</span> 구성요소 목록 중앙관리</a>
+        </li>
+        <li class="sub">
+          <a href="../controls/N2SF-IN-1_1.html"
+>
+            <span class="num">1(1)</span> 정보시스템 구성요소 최신상태 유지</a>
+        </li>
+        <li class="sub">
+          <a href="../controls/N2SF-IN-1_2.html"
+>
+            <span class="num">1(2)</span> 구성요소 목록 현행화</a>
+        </li>
+        <li class="sub">
+          <a href="../controls/N2SF-IN-1_3.html"
+>
+            <span class="num">1(3)</span> 구성요소 목록 자동관리</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IN-2.html"
+>
+            <span class="num">2</span> 비인가 구성요소 식별</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IN-3.html"
+>
+            <span class="num">3</span> 물리적 위치 식별</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IN-4.html"
+>
+            <span class="num">4</span> 변경 사항 테스트 및 검증</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IN-5.html"
+>
+            <span class="num">5</span> 비인가 변경 방지</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IN-6.html"
+>
+            <span class="num">6</span> 불필요한 구성요소 제거</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IN-7.html"
+>
+            <span class="num">7</span> 주기적인 구성요소 제거 상태 점검</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IN-8.html"
+>
+            <span class="num">8</span> 비인가 소프트웨어 실행 차단</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IN-9.html"
+>
+            <span class="num">9</span> 소프트웨어 기술지원 유지</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IN-10.html"
+>
+            <span class="num">10</span> 소프트웨어 설치 권한 제한</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IN-11.html"
+>
+            <span class="num">11</span> 재기동 서비스 신뢰성 확보</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IN-12.html"
+>
+            <span class="num">12</span> 신뢰성이 보장된 구성요소 설치</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IN-13.html"
+>
+            <span class="num">13</span> 정보의 비지속성</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IN-14.html"
+>
+            <span class="num">14</span> 연결의 비지속성</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IN-15.html"
+>
+            <span class="num">15</span> 구성요소 해시/서명 무결성 검증</a>
+        </li>
+        <li class="">
+          <a href="../controls/N2SF-IN-16.html"
+>
+            <span class="num">16</span> 악성코드 감염 차단</a>
+        </li>
+      </ul>
+    </details>
+  </details>
+</aside>
+  <main class="content">
+<nav class="crumbs">
+  <a href="../index.html">매트릭스</a> ›
+  <a href="../groups/MA.html">MA 다중요소 인증</a> ›
+  N2SF-MA-M1
+</nav>
+
+<header class="page-head">
+  <div>
+    <p class="eyebrow">N2SF-MA-M1</p>
+    <h1>다중인증요소 설정 및 관리</h1>
+    <p class="sub">다중요소 인증 (Multi-Factor Authentication) · 제2장 인증</p>
+  </div>
+</header>
+
+<section class="panel">
+  <h2>기본 정보</h2>
+  <dl class="info">
+    <dt>N2SF ID</dt><dd>N2SF-MA-M1</dd>
+    <dt>소항목</dt><dd>다중인증요소 설정 및 관리</dd>
+    <dt>우선 검토 등급</dt><dd><span class="grades"><span class="badge g-C">C 기밀</span><span class="badge g-S">S 민감</span><span class="badge g-O">O 공개</span></span></dd>
+    <dt>항목 유형</dt><dd>관리 항목</dd>
+    <dt>소속 그룹</dt><dd><a href="../groups/MA.html">MA - 다중요소 인증 (Multi-Factor Authentication)</a></dd>
+    <dt>소속 챕터</dt><dd>제2장 인증</dd>
+  </dl>
+</section>
+
+<section class="panel">
+  <h2>보안통제 설명</h2>
+  <p class="prewrap">보안 정책 또는 조건에 따라 다중요소 인증(MFA)의 적용 대상, 방식, 조합 기준을 정의하고 주기적으로 검토 및 관리하며, MFA 설정 변경은 승인 절차를 거쳐 수행된다.</p>
+</section>
+
+
+
+
+<nav class="pager">
+<a href="N2SF-MA-5.html">← N2SF-MA-5 특정상황에서의 다중요소 인증</a><a href="N2SF-EI-1.html">N2SF-EI-1 외부 자격증명 수단 활용 →</a></nav>
+    <footer class="footer">
+      원본 출처:
+      <a href="https://www.ncsc.go.kr:4018/main/cop/bbs/selectBoardArticle.do?bbsId=Notification_main&amp;nttId=218022" target="_blank" rel="noopener">국가 망 보안체계(N2SF) 보안 가이드라인 1.0 - 보안통제 항목 해설서(부록 1) – 국가사이버안보센터</a>
+      <span class="sep">·</span> 버전 1.0 (2025-09)
+    </footer>
+  </main>
+</div>
+
+<script src="../static/js/app.js"></script>
+</body>
+</html>
